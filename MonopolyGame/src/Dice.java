@@ -5,7 +5,6 @@
  */
 public class Dice {
 	private int faceValue;
-	private int doubleCounter;
 	//private int doubleCounter=0; //in player class
 	public Dice() {
 		
