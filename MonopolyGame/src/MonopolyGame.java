@@ -21,7 +21,6 @@ public class MonopolyGame {
 				}else {
 					int turnTotalMovement = gameBoard.dice1.getFaceValue()+gameBoard.dice2.getFaceValue();
 					gameBoard.move(gameBoard,currentPlayer,turnTotalMovement);
-					
 				}
 				System.out.println("\n\nAfter rolling dices: \n\n"+currentPlayer.toString());
 			}

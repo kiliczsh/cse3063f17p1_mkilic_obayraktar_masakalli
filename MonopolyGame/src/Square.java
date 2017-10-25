@@ -2,7 +2,6 @@
 public class Square {
  
 	private String squareName = "KADIKÖY";
-	private int squareAddress = 40;
 	boolean isOccupied = false;
 	public int lineUp=1;
 	public int squareID;
@@ -53,8 +52,4 @@ public class Square {
 	public void setSquareID(int squareID) {
 		this.squareID = squareID;
 	}
-	
-
-	
-	
 }

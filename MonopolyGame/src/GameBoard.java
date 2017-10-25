@@ -1,15 +1,10 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-/**
- * @author 
- *
- */
 public class GameBoard {
 	public static int numOfPlayers;
 	final int MAX_PLAYER=8;
 	final int MIN_PLAYER=2;
-	
 	Scanner input = new Scanner(System.in);
 	GameBoard gameBoard;
 	Dice dice1 = new Dice();
@@ -21,44 +16,23 @@ public class GameBoard {
 	
 	
 	public  Square[] createCells() {
-		
 		int createdPlayerNumber=0;
 		ArrayList<Square> squareList = new ArrayList<Square>();
-
 			for(createdPlayerNumber=0;createdPlayerNumber<40;createdPlayerNumber++) {
 				int id = createdPlayerNumber+1;
 				Square square= new Square(id);
 				squareList.add(square);
 			}
-			Square[] squareArray = squareList.toArray(new Square[40]);
+		Square[] squareArray = squareList.toArray(new Square[40]);
 		return squareArray;
 	}
 	
 	public void move(GameBoard gameBoard,Player player,int turnTotalMovement) {
-		// TODO Auto-generated method stub
 		Square currentCell= player.getCurrentposition();
 		Square nextCell = new Square();
 		int nextCellLoc=currentCell.lineUp+turnTotalMovement;
 		nextCell.setSquare(nextCellLoc);
-		
 		player.setCurrentposition(nextCell);
-
-	}
-
-
-	public void addCells(Square[] squareList) {
-
-		
-	}
-
-	public void addPlayers(Player[] playerList) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void addDices(Dice dice1, Dice dice2) {
-		// TODO Auto-generated method stub
-		
 	}
 
 	public Player[] diceTournament() {
@@ -66,14 +40,13 @@ public class GameBoard {
 		return null;
 	}
 	
-
 	public Player[] createPlayers(int numOfPlayers) {
 		ArrayList<Player> playerList = new ArrayList<Player>();
 		for(int i=1;i<=8;i++) {
 			Player player= new Player(i);
 			playerList.add(player);
 		}
-			Player[] playerArray = playerList.toArray(new Player[8]);
+		Player[] playerArray = playerList.toArray(new Player[8]);
 		return playerArray;
 	}
 
@@ -82,7 +55,6 @@ public class GameBoard {
 		int numberOfPlayers = 0;
 		System.out.print("Enter number of players(2~8): ");
 		if(input.hasNextInt()) {
-			
 		    numberOfPlayers = input.nextInt();
 		    if (numberOfPlayers<=MAX_PLAYER && numberOfPlayers>=MIN_PLAYER) {
 		    	System.out.println(numberOfPlayers+" players will be on this game.");
@@ -145,10 +117,9 @@ public class GameBoard {
 			}else {
 				return true;
 			}
-		}else {
+		}else{
 			player.doubleCounter=0;
 			return true;
 		}
 	}
-	
 }

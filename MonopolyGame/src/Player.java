@@ -4,14 +4,13 @@ public class Player {
 	private	int playerID;
 	private String playerName="Computer";
 	private	String playercolor="Red";
-	private	Square currentposition = new Square();
+	private	Square currentposition = new GoSquare();
 	private	int money=1500;
 	
-		public Player(int playerID) {
-			//super();
-			this.playerID = playerID;
-		}
-
+	public Player(int playerID) {
+		//super();
+		this.playerID = playerID;
+	}
 
 	/**
 	 * @return the currentposition
@@ -29,14 +28,13 @@ public class Player {
 	}
 	
 	public void increaseMoney(int m) {
-		
+		this.money+=m;
 	}
 	
 	public void decreaseMoney(int m) {
-		
+		this.money-=m;
 	}
-
-
+	
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */
@@ -45,7 +43,4 @@ public class Player {
 		return "Player [doubleCounter=" + doubleCounter + ", playerID=" + playerID + ", playerName=" + playerName
 				+ ", playercolor=" + playercolor + ", currentposition=" + currentposition + ", money=" + money + "]";
 	}
-
-
-
 }

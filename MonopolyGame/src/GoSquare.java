@@ -1,8 +1,8 @@
 
 public class GoSquare extends Square {
 
-	public GoSquare(int id) {
-		super(id);
+	public GoSquare() {
+		super(1);
 		// TODO Auto-generated constructor stub
 	}
 
