@@ -67,7 +67,10 @@ public class GameBoard {
 
 	public void move(GameBoard gameBoard,Player player,int turnTotalMovement) {
 		Square currentCell= player.getCurrentposition();
-		int nextCellLoc=currentCell.lineUp+turnTotalMovement;
+		int nextCellLoc=currentCell.getSquareID()+turnTotalMovement;
+		if(nextCellLoc>40) {
+			nextCellLoc= nextCellLoc%40;
+		}
 		player.setCurrentposition(getSquaresByID(nextCellLoc));
 	}
 
@@ -93,8 +96,9 @@ public class GameBoard {
 		if(input.hasNextInt()) {
 		    numberOfPlayers = input.nextInt();
 		    if (numberOfPlayers<=MAX_PLAYER && numberOfPlayers>=MIN_PLAYER) {
-		    	System.out.println(numberOfPlayers+" players will be on this game.");
+		    	System.out.println(numberOfPlayers+" players will be on this game.");		    	
 		    	input.close();
+		    	System.out.println("Game will start soon...");
 		    }else {
 		    	System.out.println("No way you don't deserve to play. First learn Math.");
 		    	getNumberOfPlayer(input, MAX_PLAYER, MIN_PLAYER);
@@ -126,19 +130,6 @@ public class GameBoard {
 	 */
 	public ArrayList<Square> getSquares() {
 		return getSquares();
-	}
-
-	/**
-	 * @param squares the squares to set
-	 */
-	public void setSquares(Square[] squares) {
-		this.squareList = squares;
-	}
-	/**
-	 * @return the squareList
-	 */
-	public Square[] getSquareList() {
-		return squareList;
 	}
 
 	public boolean checkDoubleCounter(Player player,int dice1Value, int dice2Value) {

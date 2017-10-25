@@ -6,11 +6,13 @@ public class MonopolyGame {
 	}
 	public static void startGame(GameBoard gameBoard) {
 		GameBoard.numOfPlayers=gameBoard.getNumberOfPlayer(gameBoard.input, gameBoard.MAX_PLAYER, gameBoard.MIN_PLAYER);
+		
 		for(int turn=1;turn<=5;turn++) {
 			System.out.println("This is "+turn+". Round.\n\n\n");
 			for(int i=0;i<GameBoard.numOfPlayers;i++) {
 				Player currentPlayer;
-				gameBoard.playerList[1].toString();//GameBoard line:87 createPlayers metodunda hata var
+				
+				gameBoard.playerList[i].toString();
 				currentPlayer = gameBoard.playerList[i];
 				System.out.println("\nBefore rolling dices: \n\n"+currentPlayer.toString()+"\n\n");
 				int dice1Value=gameBoard.dice1.rollDice();

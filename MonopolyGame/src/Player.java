@@ -4,7 +4,7 @@ public class Player {
 	private	int playerID;
 	private String playerName="Computer";
 	private	String playercolor="Red";
-	private	Square currentposition = new GoSquare();
+	private	Square currentposition = new Square(1,"GO");
 	private	int money=1500;
 	
 	public Player(int playerID) {
@@ -40,7 +40,21 @@ public class Player {
 	 */
 	@Override
 	public String toString() {
-		return "Player [doubleCounter=" + doubleCounter + ", playerID=" + playerID + ", playerName=" + playerName
-				+ ", playercolor=" + playercolor + ", currentposition=" + currentposition.toString() + ", money=" + money + "]";
+		return "Player [doubleCounter=" + doubleCounter + ", playerID=" + playerID + ", playerName=" + getPlayerName()
+				+ ", playercolor=" + playercolor + ", currentposition=" + currentposition.getSquareID()+"--"+currentposition.getSquareName() + ", money=" + money + "]";
+	}
+
+	/**
+	 * @return the playerName
+	 */
+	public String getPlayerName() {
+		return playerName;
+	}
+
+	/**
+	 * @param playerName the playerName to set
+	 */
+	public void setPlayerName(String playerName) {
+		this.playerName = playerName;
 	}
 }
