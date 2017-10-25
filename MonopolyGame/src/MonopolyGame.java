@@ -33,7 +33,7 @@ public class MonopolyGame {
 			input.close();
 
 			
-			Player playerList2[0]= new Player();
+			//Player playerList2[0]= new Player();
 			
 			
 			
