@@ -1,6 +1,7 @@
 
 public class Player {
 	private	int id;
+	int doubleCounter;
 	private	String playercolor;
 	private	Square currentposition;
 	private	Money money;
