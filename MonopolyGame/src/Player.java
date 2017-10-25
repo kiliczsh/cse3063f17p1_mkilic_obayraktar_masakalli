@@ -41,6 +41,6 @@ public class Player {
 	@Override
 	public String toString() {
 		return "Player [doubleCounter=" + doubleCounter + ", playerID=" + playerID + ", playerName=" + playerName
-				+ ", playercolor=" + playercolor + ", currentposition=" + currentposition + ", money=" + money + "]";
+				+ ", playercolor=" + playercolor + ", currentposition=" + currentposition.toString() + ", money=" + money + "]";
 	}
 }

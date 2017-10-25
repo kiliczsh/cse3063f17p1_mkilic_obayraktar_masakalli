@@ -2,7 +2,7 @@
 public class GoSquare extends Square {
 
 	public GoSquare() {
-		super(1);
+		super();
 		// TODO Auto-generated constructor stub
 	}
 

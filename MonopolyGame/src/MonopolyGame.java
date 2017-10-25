@@ -17,7 +17,7 @@ public class MonopolyGame {
 				int dice2Value=gameBoard.dice2.rollDice();
 				boolean goJailStatus = gameBoard.checkDoubleCounter(currentPlayer,dice1Value,dice2Value);
 				if(goJailStatus==false) {
-					currentPlayer.setCurrentposition(gameBoard.jail);
+					currentPlayer.setCurrentposition(gameBoard.getSquaresByID(11));//11-> Jail
 				}else {
 					int turnTotalMovement = gameBoard.dice1.getFaceValue()+gameBoard.dice2.getFaceValue();
 					gameBoard.move(gameBoard,currentPlayer,turnTotalMovement);

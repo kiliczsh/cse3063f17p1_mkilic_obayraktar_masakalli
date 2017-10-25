@@ -1,7 +1,7 @@
 
 public class JailSquare extends Square {
 	public JailSquare(int id) {
-		super(id);
+		
 		// TODO Auto-generated constructor stub
 	}
 
