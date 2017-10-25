@@ -6,6 +6,11 @@ import java.util.Scanner;
  *
  */
 public class GameBoard {
+	public static int numOfPlayers;
+	final int MAX_PLAYER=8;
+	final int MIN_PLAYER=2;
+	
+	
 	Scanner input = new Scanner(System.in);
 	GameBoard gameBoard;
 	Dice dice1 = new Dice();
@@ -17,9 +22,7 @@ public class GameBoard {
 	
 	
 
-	public static int numOfPlayers;
-	final int MAX_PLAYER=8;
-	final int MIN_PLAYER=2;
+
 	
 	
 	@SuppressWarnings("unchecked")
@@ -92,7 +95,7 @@ public class GameBoard {
 	public static Player[] createPlayers(int numOfPlayers) {
 		
 		int createdPlayerNumber=0;
-		String playerName;
+		String playerName="";
 		ArrayList<Player> playerList = new ArrayList();
 
 			for(createdPlayerNumber=0;createdPlayerNumber<numOfPlayers;createdPlayerNumber++) {

@@ -7,7 +7,7 @@ public class MonopolyGame {
 	public static void startGame(GameBoard gameBoard) {
 		gameBoard.numOfPlayers=gameBoard.getNumberOfPlayer(gameBoard.input, gameBoard.MAX_PLAYER, gameBoard.MIN_PLAYER);
 		for(int turn=1;turn<=5;turn++) {
-			for(int i=0;i<GameBoard.numOfPlayers;i++) {
+			for(int i=0;i<3;i++) {
 				Player currentPlayer = gameBoard.playerList[i];
 				currentPlayer.toString();
 				gameBoard.dice1.rollDice();
