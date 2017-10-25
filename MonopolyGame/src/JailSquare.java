@@ -1,11 +1,13 @@
 
 public class JailSquare extends Square {
+	public JailSquare(int id) {
+		super(id);
+		// TODO Auto-generated constructor stub
+	}
+
 	private Money charge;
 	private int period;
 	
-	public JailSquare() {
-		
-	}
 
 	/**
 	 * @return the charge

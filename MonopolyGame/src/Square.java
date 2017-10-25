@@ -5,8 +5,9 @@ public class Square {
 	private int address = 40;
 	boolean isOccupied = false;
 	public int lineUp;
-	public Square() {
-		
+	public int squareID;
+	public Square(int id) {
+		setSquareID(id);
 	}
 	/**
 	 * @return the name
@@ -39,4 +40,22 @@ public class Square {
 	public String toString() {
 		return "The name of the square that are located in the address: " + getAddress() + " is: " + getName();  
 	}
+	public void setSquare(int nextCellLoc) {
+		// TODO Auto-generated method stub
+		
+	}
+	/**
+	 * @return the squareID
+	 */
+	public int getSquareID() {
+		return squareID;
+	}
+	/**
+	 * @param squareID the squareID to set
+	 */
+	public void setSquareID(int squareID) {
+		this.squareID = squareID;
+	}
+	
+	
 }
