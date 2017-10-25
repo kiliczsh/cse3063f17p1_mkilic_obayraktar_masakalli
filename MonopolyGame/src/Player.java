@@ -59,7 +59,7 @@ void myTurn() {
 
 void addPlayer(Player player) {
 	
-	//adding players
+	System.out.print("Player");
 }
 
 void removePlayer(Player player) {
