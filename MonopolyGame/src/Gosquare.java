@@ -1,4 +1,9 @@
 
-public class Gosquare {
+public class GoSquare extends Square {
 
+	
+	
+	public GoSquare() {
+		
+	}
 }
