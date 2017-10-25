@@ -9,6 +9,9 @@ public class Square {
 	public Square(int id) {
 		setSquareID(id);
 	}
+	public Square() {
+		// TODO Auto-generated constructor stub
+	}
 	/**
 	 * @return the name
 	 */

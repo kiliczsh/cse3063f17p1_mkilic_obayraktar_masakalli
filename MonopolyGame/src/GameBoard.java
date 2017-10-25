@@ -10,7 +10,6 @@ public class GameBoard {
 	final int MAX_PLAYER=8;
 	final int MIN_PLAYER=2;
 	
-	
 	Scanner input = new Scanner(System.in);
 	GameBoard gameBoard;
 	Dice dice1 = new Dice();
@@ -21,11 +20,6 @@ public class GameBoard {
 	Square[] squareList= createCells();
 	
 	
-
-
-	
-	
-	@SuppressWarnings("unchecked")
 	public  Square[] createCells() {
 		
 		int createdPlayerNumber=0;
@@ -40,18 +34,16 @@ public class GameBoard {
 		return squareArray;
 	}
 	
-
 	public void move(GameBoard gameBoard,Player player,int turnTotalMovement) {
 		// TODO Auto-generated method stub
 		Square currentCell= player.getCurrentposition();
-		Square nextCell = null;
+		Square nextCell = new Square();
 		int nextCellLoc=currentCell.lineUp+turnTotalMovement;
 		nextCell.setSquare(nextCellLoc);
 		
 		player.setCurrentposition(nextCell);
 
 	}
-
 
 	public boolean checkDoubleCounter(Player player,Dice dice1,Dice dice2) {
 		int value1,value2;
@@ -95,20 +87,20 @@ public class GameBoard {
 	public static Player[] createPlayers(int numOfPlayers) {
 		
 		int createdPlayerNumber=0;
-		String playerName="";
+		//String playerName="";
 		ArrayList<Player> playerList = new ArrayList();
 
 			for(createdPlayerNumber=0;createdPlayerNumber<numOfPlayers;createdPlayerNumber++) {
 				new Scanner(System.in);
 				int id = createdPlayerNumber+1;
-				System.out.println("ID: "+id);
+				/*System.out.println("ID: "+id);
 				System.out.println("Enter "+id+ ". Player's name: ");
 				String line = null;
 				/*while(scan.hasNextLine()){
 					line=scan.nextLine();//not working yet
 				}*/
-				playerName=line;
-				Player player= new Player(id,playerName);
+				
+				Player player= new Player(id);
 				playerList.add(player);
 			}
 			Player[] playerArray = playerList.toArray(new Player[numOfPlayers]);
@@ -125,7 +117,7 @@ public class GameBoard {
 		    numberOfPlayers = input.nextInt();
 		    if (numberOfPlayers<=MAX_PLAYER && numberOfPlayers>=MIN_PLAYER) {
 		    	System.out.println(numberOfPlayers+" players will be on this game.");
-		    	input.close();
+		    	//input.close();
 		    }else {
 		    	System.out.println("No way you don't deserve to play. First learn Math.");
 		    	getNumberOfPlayer(input, MAX_PLAYER, MIN_PLAYER);
@@ -172,8 +164,4 @@ public class GameBoard {
 		return squareList;
 	}
 	
-	
-
-	
-
 }

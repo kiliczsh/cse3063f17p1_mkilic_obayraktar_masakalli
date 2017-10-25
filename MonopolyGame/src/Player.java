@@ -1,14 +1,25 @@
 
 public class Player {
 	private	int id;
+	private String playerName;
 	int doubleCounter;
 	private	String playercolor;
 	private	Square currentposition;
 	private	Money money;
-		
-		public Player(int i, String playerName) {
-		// TODO Auto-generated constructor stub
-	}
+		public Player(int id) {
+			super();
+			this.id = id;
+		}
+
+		/**
+		 * @param id
+		 * @param playerName
+		 */
+		public Player(int id, String playerName) {
+			super();
+			this.id = id;
+			this.playerName = playerName;
+		}
 
 		/**
 	 * @return the id
