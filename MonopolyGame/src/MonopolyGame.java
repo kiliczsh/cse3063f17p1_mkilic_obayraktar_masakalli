@@ -14,12 +14,19 @@ public class MonopolyGame {
 		final int MAX_PLAYER=8;
 		final int MIN_PLAYER=2;
 		Scanner input = new Scanner(System.in);
-		Dice dice1 = new Dice();
-		Dice dice2 = new Dice();
-		//get number of players from user 
-		getNumberOfPlayer(input, MAX_PLAYER, MIN_PLAYER);
 		
-		createPlayers(numOfPlayers);
+		GameBoard gameBoard = new GameBoard();
+		
+		Square[] squareList = createSquares();
+		gameBoard.addCells(squareList);
+		
+		getNumberOfPlayer(input, MAX_PLAYER, MIN_PLAYER);
+		Player[] playerList = createPlayers(numOfPlayers);
+		gameBoard.addPlayers(playerList);
+		
+		Player[] playingOrder=gameBoard.diceTournament();
+		
+		startGame(playingOrder);
 		
 		
 	}
@@ -28,8 +35,54 @@ public class MonopolyGame {
 
 
 
+	public static void startGame(Player[] playingOrder,GameBoard gameBoard) {
+		final int GAME_TURN=5;
+		for(int i=0;i<numOfPlayers;i++) {
+			Player currentPlayer = playingOrder[i];
+			currentPlayer.toString();
+			gameBoard.dice1.rollDice();
+			gameBoard.dice2.rollDice();
+			boolean goJailStatus = gameBoard.checkDoubleCounter(currentPlayer, gameBoard.dice1,gameBoard.dice2);
+			if(goJailStatus==false) {
+				currentPlayer.setCurrentposition("Jail");
+			}else {
+				int turnTotalMovement = gameBoard.dice1.getFaceValue()+gameBoard.dice2.getFaceValue();
+				move(gameBoard,currentPlayer,turnTotalMovement);
+				
+			}
+		}
+		
+		
+		
+	}
+	
+	public static void move(GameBoard gameBoard,Player player,int turnTotalMovement) {
+		// TODO Auto-generated method stub
+		Square currentCell= player.getCurrentposition();
+		Square nextCell;
+		int nextCellLoc=currentCell.lineUp+turnTotalMovement;
+		nextCell.setSquare(nextCellLoc);
+		
+		
+		player.setCurrentposition(nextCell);
+		
+		
+		
+	}
+
+
+
+
+
+	private static Square[] createSquares() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+
 	@SuppressWarnings({ "unchecked", "rawtypes", "resource" })
-	public static ArrayList createPlayers(int numOfPlayers) {
+	public static Player[] createPlayers(int numOfPlayers) {
 		
 		int createdPlayerNumber=0;
 		String playerName;
@@ -42,13 +95,14 @@ public class MonopolyGame {
 				System.out.println("Enter "+id+ ". Player's name: ");
 				String line = null;
 				while(scan.hasNextLine()){
-					line=scan.nextLine();
+					line=scan.nextLine();//not working yet
 				}
-					playerName=line;
+				playerName=line;
 				Player player= new Player(id,playerName);
 				playerList.add(player);
 			}
-		return playerList;
+			Player[] playerArray = playerList.toArray(new Player[numOfPlayers]);
+		return playerArray;
 		
 	}
 

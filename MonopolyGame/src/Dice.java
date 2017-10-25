@@ -13,22 +13,10 @@ public class Dice {
 	public void rollDice() {
 		int newFaceValue=(int)(Math.random()*6+1);
 		setFaceValue(newFaceValue);
-		System.out.println(newFaceValue);
+		System.out.println("Face Value: "+newFaceValue);
 	}
 	
-	public void checkDoubleCounter(Player player,Dice dice1,Dice dice2) {
-		int value1,value2;
-		value1=dice1.getFaceValue();
-		value2=dice2.getFaceValue();
-		if(value1==value2) {
-			player.doubleCounter++;
-			if(player.doubleCounter >=3) {
-			//	player.setCurrentPosition("Jail"); // will added soon
-			}
-		}else {
-			player.doubleCounter=0;
-		}
-	}
+
 	
 	
 	/**

@@ -4,7 +4,7 @@ public class Square {
 	private String name = "KADIKÖY";
 	private int address = 40;
 	boolean isOccupied = false;
-	
+	public int lineUp;
 	public Square() {
 		
 	}
