@@ -47,6 +47,14 @@ public class Player {
 	public void setCurrentposition(Square currentposition) {
 		this.currentposition = currentposition;
 	}
+	
+	public void increaseMoney(Money m) {
+		
+	}
+	
+	public void decreaseMoney(Money m) {
+		
+	}
 
 	/**
 	 * @return the money
@@ -59,7 +67,7 @@ public class Player {
 
 	void addPlayer(Player player) {
 		
-		System.out.print("Player");
+		
 	}
 
 	void removePlayer(Player player) {
