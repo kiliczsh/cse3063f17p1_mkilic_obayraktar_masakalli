@@ -13,7 +13,7 @@ __*[Onur Bayraktar](https://github.com/onurbayraktar)-150114079*__ :rocket:
  ### Iteration 1 To Do List
  ##### Due Date : Thu, October 26, 14:00
 
-- [ ] Requirement Analysis Document (CSE3063F17P1_RAD_mkilic_obayraktar_masakalli_iteration1.pdf)
+- [x] Requirement Analysis Document (CSE3063F17P1_RAD_mkilic_obayraktar_masakalli_iteration1.pdf)
 - [ ] Domain Model as an partial UML class diagram (CSE3063F17P1_DOMAINMODEL_mkilic_obayraktar_masakalli_iteration1.pdf)
 - [ ] UML class diagram (CSE3063F17P1_DCD_mkilic_obayraktar_masakalli_iteration1.pdf)
 - [ ] UML Sequence Diagram(s) (CSE3063F17P1_DSD_mkilic_obayraktar_masakalli_iteration1.pdf)
