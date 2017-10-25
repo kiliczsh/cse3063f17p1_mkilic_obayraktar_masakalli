@@ -49,9 +49,8 @@ public class Dice {
 	 */
 	@Override
 	public String toString() {
-		return "Dice [faceValue=" + faceValue + ", getFaceValue()="
-				+ getFaceValue() + ", toString()=" + super.toString()
-				+ "]";
+		return "Dice [faceValue=" + faceValue + ", getFaceValue()=" + getFaceValue() + ", toString()="
+				+ super.toString() + "]";
 	}
 
 	
