@@ -6,6 +6,10 @@ public class Player {
 	private	Square currentposition;
 	private	Money money;
 		
+		public Player(int i, String playerName) {
+		// TODO Auto-generated constructor stub
+	}
+
 		/**
 	 * @return the id
 	 */

@@ -1,4 +1,7 @@
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 public class MonopolyGame {
 
@@ -16,7 +19,7 @@ public class MonopolyGame {
 		//get number of players from user 
 		getNumberOfPlayer(input, MAX_PLAYER, MIN_PLAYER);
 		
-		createPlayers(input,numOfPlayers,playerList);
+		createPlayers(numOfPlayers);
 		
 		
 	}
@@ -24,24 +27,39 @@ public class MonopolyGame {
 
 
 
-	private static Player[] createPlayers(Scanner input,int numOfPlayers) {
-		// TODO Auto-generated method stub
-		int createdPlayerNumber=0;
-		while(createdPlayerNumber<numOfPlayers){
-			System.out.println("Enter name of "+(createdPlayerNumber+1)+". Player: ");
-			String playerName=input.nextLine();
-			input.close();
 
-			
-			//Player playerList2[0]= new Player();
-			
-			
-			
-			createdPlayerNumber++;
-			return playerList2;
-		}
+	@SuppressWarnings({ "unchecked", "rawtypes", "resource" })
+	public static ArrayList createPlayers(int numOfPlayers) {
+		
+		int createdPlayerNumber=0;
+		String playerName;
+		ArrayList<Player> playerList = new ArrayList();
+
+			for(createdPlayerNumber=0;createdPlayerNumber<numOfPlayers;createdPlayerNumber++) {
+				Scanner scan = new Scanner(System.in);
+				int id = createdPlayerNumber+1;
+				System.out.println("ID: "+id);
+				System.out.println("Enter "+id+ ". Player's name: ");
+				String line = null;
+				while(scan.hasNextLine()){
+					line=scan.nextLine();
+				}
+					playerName=line;
+				Player player= new Player(id,playerName);
+				playerList.add(player);
+			}
+		return playerList;
 		
 	}
+
+
+
+
+	private static Object Player(int i, String playerName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 
 
 
