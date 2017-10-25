@@ -89,4 +89,6 @@ public class Player {
 		return "Player [id=" + id + ", playercolor=" + playercolor + ", money=" + money + "]";
 	}
 
+
+
 }

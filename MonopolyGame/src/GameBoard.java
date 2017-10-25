@@ -7,6 +7,7 @@ import java.util.ArrayList;
 public class GameBoard {
 	Dice dice1 = new Dice();
 	Dice dice2 = new Dice();
+	Square jail= new JailSquare();
 	ArrayList<Square> squares = new ArrayList<Square>();
 
 	
