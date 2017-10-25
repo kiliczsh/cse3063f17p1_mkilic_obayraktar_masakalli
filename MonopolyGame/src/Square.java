@@ -1,51 +1,45 @@
 
 public class Square {
  
-	private String name = "KADIKÖY";
-	private int address = 40;
+	private String squareName = "KADIKÖY";
+	private int squareAddress = 40;
 	boolean isOccupied = false;
-	public int lineUp;
+	public int lineUp=1;
 	public int squareID;
+	
 	public Square(int id) {
 		setSquareID(id);
+		this.lineUp=lineUp+1;
 	}
 	public Square() {
-		// TODO Auto-generated constructor stub
-	}
-	/**
-	 * @return the name
-	 */
-	public String getName() {
-		return name;
+		this.lineUp=lineUp+1;
 	}
 
+	public void setSquare(int nextCellLocation) {
+	}
 	/**
-	 * @param name the name to set
+	 * @return the squareName
 	 */
-	public void setName(String name) {
-		this.name = name;
+	public String getSquareName() {
+		return squareName;
 	}
-
 	/**
-	 * @return the address
+	 * @param squareName the squareName to set
 	 */
-	public int getAddress() {
-		return address;
+	public void setSquareName(String squareName) {
+		this.squareName = squareName;
 	}
-
 	/**
-	 * @param address the address to set
+	 * @return the isOccupied
 	 */
-	public void setAddress(int address) {
-		this.address = address;
+	public boolean isOccupied() {
+		return isOccupied;
 	}
-	
-	public String toString() {
-		return "The name of the square that are located in the address: " + getAddress() + " is: " + getName();  
-	}
-	public void setSquare(int nextCellLoc) {
-		// TODO Auto-generated method stub
-		
+	/**
+	 * @param isOccupied the isOccupied to set
+	 */
+	public void setOccupied(boolean isOccupied) {
+		this.isOccupied = isOccupied;
 	}
 	/**
 	 * @return the squareID
@@ -59,6 +53,8 @@ public class Square {
 	public void setSquareID(int squareID) {
 		this.squareID = squareID;
 	}
+	
+
 	
 	
 }

@@ -45,23 +45,6 @@ public class GameBoard {
 
 	}
 
-	public boolean checkDoubleCounter(Player player,Dice dice1,Dice dice2) {
-		int value1,value2;
-		value1=dice1.getFaceValue();
-		value2=dice2.getFaceValue();
-		if(value1==value2) {
-			player.doubleCounter++;
-			if(player.doubleCounter >=3) {
-				return false;
-			}else {
-				return true;
-			}
-		}else {
-			player.doubleCounter=0;
-			return true;
-		}
-	}
-	
 
 	public void addCells(Square[] squareList) {
 
@@ -83,29 +66,15 @@ public class GameBoard {
 		return null;
 	}
 	
-	@SuppressWarnings({ "unchecked", "rawtypes", "resource" })
-	public static Player[] createPlayers(int numOfPlayers) {
-		
-		int createdPlayerNumber=0;
-		//String playerName="";
-		ArrayList<Player> playerList = new ArrayList();
 
-			for(createdPlayerNumber=0;createdPlayerNumber<numOfPlayers;createdPlayerNumber++) {
-				new Scanner(System.in);
-				int id = createdPlayerNumber+1;
-				/*System.out.println("ID: "+id);
-				System.out.println("Enter "+id+ ". Player's name: ");
-				String line = null;
-				/*while(scan.hasNextLine()){
-					line=scan.nextLine();//not working yet
-				}*/
-				
-				Player player= new Player(id);
-				playerList.add(player);
-			}
-			Player[] playerArray = playerList.toArray(new Player[numOfPlayers]);
+	public Player[] createPlayers(int numOfPlayers) {
+		ArrayList<Player> playerList = new ArrayList<Player>();
+		for(int i=1;i<=8;i++) {
+			Player player= new Player(i);
+			playerList.add(player);
+		}
+			Player[] playerArray = playerList.toArray(new Player[8]);
 		return playerArray;
-		
 	}
 
 	public int getNumberOfPlayer(Scanner input,int MAX_PLAYER, int MIN_PLAYER) {
@@ -117,7 +86,7 @@ public class GameBoard {
 		    numberOfPlayers = input.nextInt();
 		    if (numberOfPlayers<=MAX_PLAYER && numberOfPlayers>=MIN_PLAYER) {
 		    	System.out.println(numberOfPlayers+" players will be on this game.");
-		    	//input.close();
+		    	input.close();
 		    }else {
 		    	System.out.println("No way you don't deserve to play. First learn Math.");
 		    	getNumberOfPlayer(input, MAX_PLAYER, MIN_PLAYER);
@@ -162,6 +131,24 @@ public class GameBoard {
 	 */
 	public Square[] getSquareList() {
 		return squareList;
+	}
+
+	public boolean checkDoubleCounter(Player player,int dice1Value, int dice2Value) {
+		int value1=dice1Value;
+		int value2=dice2Value;
+		value1=dice1.getFaceValue();
+		value2=dice2.getFaceValue();
+		if(value1==value2) {
+			player.doubleCounter++;
+			if(player.doubleCounter >=3) {
+				return false;
+			}else {
+				return true;
+			}
+		}else {
+			player.doubleCounter=0;
+			return true;
+		}
 	}
 	
 }

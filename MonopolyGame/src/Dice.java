@@ -10,10 +10,11 @@ public class Dice {
 		
 	}
 	
-	public void rollDice() {
+	public int rollDice() {
 		int newFaceValue=(int)(Math.random()*6+1);
 		setFaceValue(newFaceValue);
-		System.out.println("Face Value: "+newFaceValue);
+		System.out.println("Face Value of dice is: "+newFaceValue+".");
+		return newFaceValue;
 	}
 	
 
@@ -31,16 +32,6 @@ public class Dice {
 	public void setFaceValue(int faceValue) {
 		this.faceValue = faceValue;
 	}
-	
-	/* (non-Javadoc)
-	 * @see java.lang.Object#toString()
-	 */
-	@Override
-	public String toString() {
-		return "Dice [faceValue=" + faceValue + ", getFaceValue()=" + getFaceValue() + ", toString()="
-				+ super.toString() + "]";
-	}
-
 	
 }
 
