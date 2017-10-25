@@ -26,7 +26,7 @@ public class Dice {
 			//	player.setCurrentPosition("Jail"); // will added soon
 			}
 		}else {
-			Player.doubleCounter=0;
+			player.doubleCounter=0;
 		}
 	}
 	
@@ -43,26 +43,14 @@ public class Dice {
 	public void setFaceValue(int faceValue) {
 		this.faceValue = faceValue;
 	}
-	/**
-	 * @return the doubleCounter
-	 */
-	public int getDoubleCounter() {
-		return doubleCounter;
-	}
-	/**
-	 * @param doubleCounter the doubleCounter to set
-	 */
-	public void setDoubleCounter(int doubleCounter) {
-		
-		this.doubleCounter = doubleCounter;
-	}
+	
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
 	public String toString() {
-		return "Dice [faceValue=" + faceValue + ", doubleCounter=" + doubleCounter + ", getFaceValue()="
-				+ getFaceValue() + ", getDoubleCounter()=" + getDoubleCounter() + ", toString()=" + super.toString()
+		return "Dice [faceValue=" + faceValue + ", getFaceValue()="
+				+ getFaceValue() + ", toString()=" + super.toString()
 				+ "]";
 	}
 
