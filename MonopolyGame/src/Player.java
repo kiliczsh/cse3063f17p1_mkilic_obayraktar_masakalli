@@ -1,47 +1,23 @@
 
 public class Player {
-	private	int id;
 	int doubleCounter;
-	private	String playercolor;
-	private	Square currentposition;
-	private	Money money;
-		
-		public Player(int i, String playerName) {
-		// TODO Auto-generated constructor stub
-	}
+	private	int playerID;
+	private String playerName="Computer";
+	private	String playercolor="Red";
+	private	Square currentposition = new Square();
+	private	int money=1500;
+	
+		public Player(int playerID) {
+			//super();
+			this.playerID = playerID;
+		}
 
-		/**
-	 * @return the id
-	 */
-	public int getId() {
-		return id;
-	}
-
-	/**
-	 * @param id the id to set
-	 */
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	/**
-	 * @return the playercolor
-	 */
-	public String getPlayercolor() {
-		return playercolor;
-	}
-
-	/**
-	 * @param playercolor the playercolor to set
-	 */
-	public void setPlayercolor(String playercolor) {
-		this.playercolor = playercolor;
-	}
 
 	/**
 	 * @return the currentposition
 	 */
 	public Square getCurrentposition() {
+		
 		return currentposition;
 	}
 
@@ -52,41 +28,22 @@ public class Player {
 		this.currentposition = currentposition;
 	}
 	
-	public void increaseMoney(Money m) {
+	public void increaseMoney(int m) {
 		
 	}
 	
-	public void decreaseMoney(Money m) {
+	public void decreaseMoney(int m) {
 		
 	}
 
-	/**
-	 * @return the money
-	 */
-		
-	void myTurn() {
-		//deciding player turn
-		
-	}
-
-	void addPlayer(Player player) {
-		
-		
-	}
-
-	void removePlayer(Player player) {
-		
-		//remove players from the game
-		
-	   }
 
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
 	public String toString() {
-		System.out.println( "Player [id=" + id + ", playercolor=" + playercolor + ", money=" + money + "]");
-		return "Player [id=" + id + ", playercolor=" + playercolor + ", money=" + money + "]";
+		return "Player [doubleCounter=" + doubleCounter + ", playerID=" + playerID + ", playerName=" + playerName
+				+ ", playercolor=" + playercolor + ", currentposition=" + currentposition + ", money=" + money + "]";
 	}
 
 

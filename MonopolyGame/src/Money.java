@@ -36,9 +36,14 @@ public int getSalaryAmount() {
 public void setSalaryAmount(int salaryAmount) {
 	this.salaryAmount = salaryAmount;
 }
-
-
+/* (non-Javadoc)
+ * @see java.lang.Object#toString()
+ */
+@Override
 public String toString() {
-	 return "New value of money of " + player + " is: " + player.money;
- }
+	return "Money [initialAmount=" + initialAmount + ", salaryAmount=" + salaryAmount + "]";
+}
+
+
+
 }

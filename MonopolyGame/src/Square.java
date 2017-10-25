@@ -1,42 +1,60 @@
 
 public class Square {
  
-	private String name = "KADIKÖY";
-	private int address = 40;
+	private String squareName = "KADIKÖY";
+	private int squareAddress = 40;
 	boolean isOccupied = false;
-	public int lineUp;
+	public int lineUp=1;
+	public int squareID;
+	
+	public Square(int id) {
+		setSquareID(id);
+		this.lineUp=lineUp+1;
+	}
 	public Square() {
-		
-	}
-	/**
-	 * @return the name
-	 */
-	public String getName() {
-		return name;
+		this.lineUp=lineUp+1;
 	}
 
-	/**
-	 * @param name the name to set
-	 */
-	public void setName(String name) {
-		this.name = name;
+	public void setSquare(int nextCellLocation) {
 	}
-
 	/**
-	 * @return the address
+	 * @return the squareName
 	 */
-	public int getAddress() {
-		return address;
+	public String getSquareName() {
+		return squareName;
 	}
-
 	/**
-	 * @param address the address to set
+	 * @param squareName the squareName to set
 	 */
-	public void setAddress(int address) {
-		this.address = address;
+	public void setSquareName(String squareName) {
+		this.squareName = squareName;
+	}
+	/**
+	 * @return the isOccupied
+	 */
+	public boolean isOccupied() {
+		return isOccupied;
+	}
+	/**
+	 * @param isOccupied the isOccupied to set
+	 */
+	public void setOccupied(boolean isOccupied) {
+		this.isOccupied = isOccupied;
+	}
+	/**
+	 * @return the squareID
+	 */
+	public int getSquareID() {
+		return squareID;
+	}
+	/**
+	 * @param squareID the squareID to set
+	 */
+	public void setSquareID(int squareID) {
+		this.squareID = squareID;
 	}
 	
-	public String toString() {
-		return "The name of the square that are located in the address: " + getAddress() + " is: " + getName();  
-	}
+
+	
+	
 }
