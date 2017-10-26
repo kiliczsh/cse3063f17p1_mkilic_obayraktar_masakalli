@@ -12,8 +12,8 @@ public class MonopolyGame {
 			for(int i=0;i<GameBoard.numOfPlayers;i++) {
 				Player currentPlayer;
 				
-				gameBoard.playerList[i].toString();
-				currentPlayer = gameBoard.playerList[i];
+				gameBoard.playingOrder[i].toString();
+				currentPlayer = gameBoard.playingOrder[i];
 				System.out.println("\nBefore rolling dices: \n\n"+currentPlayer.toString()+"\n\n");
 				int dice1Value=gameBoard.dice1.rollDice();
 				int dice2Value=gameBoard.dice2.rollDice();

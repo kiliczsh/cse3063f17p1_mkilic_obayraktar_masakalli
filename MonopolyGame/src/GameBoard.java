@@ -1,5 +1,10 @@
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Random;
 import java.util.Scanner;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class GameBoard {
 	public static int numOfPlayers;
@@ -9,8 +14,8 @@ public class GameBoard {
 	GameBoard gameBoard;
 	Dice dice1 = new Dice();
 	Dice dice2 = new Dice();
-	Player[] playerList = createPlayers(numOfPlayers);
-	//Player[] playingOrder = gameBoard.diceTournament();
+	Player[] playerList = createPlayers(input,numOfPlayers);
+	Player[] playingOrder = diceTournament(gameBoard,playerList);
 	Square[] squareList= createCells();
 	
 	
@@ -73,15 +78,65 @@ public class GameBoard {
 		}
 		player.setCurrentposition(getSquaresByID(nextCellLoc));
 	}
+	
+	public void printPlayerList(Player[] playerList) {
+		for (Player player : playerList) {
+			System.out.println("Player ID: "+player.getPlayerID());
+		}
+	}
 
-	public Player[] diceTournament() {
-		// TODO Auto-generated method stub
-		return null;
+	
+
+	
+	public Player[] diceTournament(GameBoard gameBoard,Player[] playerList) {
+		for(int i=0;i<playerList.length;i++) {
+			playerList[i].diceTournamentValue = dice1.rollDice() + dice2.rollDice();
+			for (Player player : playerList) {
+				   for(int j=0;j<playerList.length;j++){
+					   if(player.getPlayerID() != playerList[i].getPlayerID()) {
+						   while(playerList[i].diceTournamentValue == player.diceTournamentValue) {
+							   playerList[i].diceTournamentValue = dice1.rollDice() + dice2.rollDice();
+						   }
+					   }
+				   }
+			}
+		}
+		
+		
+		Player[] playingList = new Player[playerList.length];
+		
+	
+		int max=playerList[0].diceTournamentValue;
+		int min=playerList[0].diceTournamentValue;
+		for(int k=0;k<playerList.length;k++) {
+			if(playerList[k].diceTournamentValue>max) {
+				max=playerList[k].diceTournamentValue;
+			}else if(playerList[k].diceTournamentValue<min) {
+				min=playerList[k].diceTournamentValue;
+			}
+		}
+		Integer[][] diceValues= new Integer[playerList.length][2];
+		for(int t=0;t<playerList.length;t++) {
+			diceValues[t][0]=playerList[t].diceTournamentValue;
+			diceValues[t][1]=playerList[t].getPlayerID();
+		}
+		Arrays.sort(diceValues, new ArrayComparator(0, true));
+
+		for(int i=0;i<playerList.length;i++) {
+			for(int j=0;j<diceValues.length;j++) {
+					if( diceValues[j][0] == playerList[i].diceTournamentValue && diceValues[j][1] == playerList[i].getPlayerID()) {
+					playingList[i]=playerList[i];
+				}
+			}
+		}
+		
+		return playingList;
 	}
 	
-	public Player[] createPlayers(int numOfPlayers) {
+	public Player[] createPlayers(Scanner input,int numOfPlayers) {
 		ArrayList<Player> playerList = new ArrayList<Player>();
-		for(int i=1;i<=8;i++) {
+		int i=0;
+		for(i=1;i<=8;i++) {
 			Player player= new Player(i);
 			playerList.add(player);
 		}

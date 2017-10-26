@@ -1,6 +1,7 @@
 
 public class Player {
 	int doubleCounter;
+	int diceTournamentValue=-1;
 	private	int playerID;
 	private String playerName="Computer";
 	private	String playercolor="Red";
@@ -40,8 +41,9 @@ public class Player {
 	 */
 	@Override
 	public String toString() {
-		return "Player [doubleCounter=" + doubleCounter + ", playerID=" + playerID + ", playerName=" + getPlayerName()
-				+ ", playercolor=" + playercolor + ", currentposition=" + currentposition.getSquareID()+"--"+currentposition.getSquareName() + ", money=" + money + "]";
+		return "Player: "+ getPlayerName() + " [ doubleCounter=" + doubleCounter + ", playerID=" + playerID + 
+				", playercolor=" + playercolor + ", currentposition=" + currentposition.getSquareID()+"--"+
+				currentposition.getSquareName() + ", money=" + money + " ]";
 	}
 
 	/**
@@ -57,4 +59,19 @@ public class Player {
 	public void setPlayerName(String playerName) {
 		this.playerName = playerName;
 	}
+
+	/**
+	 * @return the playerID
+	 */
+	public int getPlayerID() {
+		return playerID;
+	}
+
+	/**
+	 * @param playerID the playerID to set
+	 */
+	public void setPlayerID(int playerID) {
+		this.playerID = playerID;
+	}
+	
 }
