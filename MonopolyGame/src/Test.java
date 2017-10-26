@@ -64,10 +64,6 @@ public class Test {
 	    Assert.assertNotNull(dice);
 	    Assert.assertNotNull(player);
 	    Assert.assertNotNull(gameBoard);
-	    
-	    
-	    
-	    
-	    
+
 	}
 }
