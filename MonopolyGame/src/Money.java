@@ -44,6 +44,4 @@ public String toString() {
 	return "Money [initialAmount=" + initialAmount + ", salaryAmount=" + salaryAmount + "]";
 }
 
-
-
 }

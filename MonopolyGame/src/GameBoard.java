@@ -1,8 +1,6 @@
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
-
 
 public class GameBoard {
 	//Declarations and Initilizations
@@ -14,13 +12,9 @@ public class GameBoard {
 	Player[] playerList = createPlayers(input,numOfPlayers);
 	Player[] playingOrder = diceTournament(gameBoard,playerList);
 	Square[] squareList= createCells();
-	
-	
-	public GameBoard() {
-		
-	}
-		
+
 	public  Square[] createCells() {
+		//List of Squares
 		ArrayList<Square> squareList = new ArrayList<Square>();
 		Square  square1,square2,square3,square4,square5,square6,square7,square8,square9,square10,
 		square11,square12,square13,square14,square15,square16,square17,square18,square19,square20,
@@ -66,7 +60,6 @@ public class GameBoard {
 		squareList.add((square38 = new Square(38,"Property")));
 		squareList.add((square39 = new Square(39,"Tax")));
 		squareList.add((square40 = new Square(40,"Property")));
-
 		Square[] squareArray = squareList.toArray(new Square[40]);
 		return squareArray;
 	}
@@ -78,12 +71,6 @@ public class GameBoard {
 			nextCellLoc= nextCellLoc%40;
 		}
 		player.setCurrentposition(getSquaresByID(nextCellLoc));
-	}
-	
-	public void printPlayerList(Player[] playerList) {
-		for (Player player : playerList) {
-			System.out.println("Player ID: "+player.getPlayerID());
-		}
 	}
 
 	public Player[] diceTournament(GameBoard gameBoard,Player[] playerList) {
@@ -123,10 +110,8 @@ public class GameBoard {
 				}
 			}
 		}
-		
 		return playingList;
 	}
-	
 
 	public Player[] createPlayers(Scanner input,int numOfPlayers) {
 		ArrayList<Player> playerList = new ArrayList<Player>();
@@ -137,31 +122,8 @@ public class GameBoard {
 		}
 		Player[] playerArray = playerList.toArray(new Player[8]);
 		return playerArray;
-	} 
-
-	/*public int getNumberOfPlayer(Scanner input,int MAX_PLAYER, int MIN_PLAYER) {
-		input= new Scanner(System.in);
-		int numberOfPlayers = 0;
-		System.out.print("Enter number of players(2~8): ");
-		if(input.hasNextInt()) {
-		    numberOfPlayers = input.nextInt();
-		    if (numberOfPlayers<=MAX_PLAYER && numberOfPlayers>=MIN_PLAYER) {
-		    	System.out.println(numberOfPlayers+" players will be on this game.");		    	
-		    	input.close();
-		    	System.out.println("Game will start soon...");
-		    }else {
-		    	System.out.println("No way you don't deserve to play. First learn Math.");
-		    	getNumberOfPlayer(input, MAX_PLAYER, MIN_PLAYER);
-		    }
-		}else {
-			System.out.println("No way you don't deserve to play. First learn Math.");
-			getNumberOfPlayer(input, MAX_PLAYER, MIN_PLAYER);
-		}
-		setNumOfPlayers(numberOfPlayers);
-		return numberOfPlayers; 
-	} */
-
-
+	}
+	
 	/**
 	 * @param numOfPlayers the numOfPlayers to set
 	 */

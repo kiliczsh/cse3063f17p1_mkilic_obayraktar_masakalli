@@ -1,4 +1,3 @@
-
 public class Player {
 	int doubleCounter;
 	int diceTournamentValue=-1;
@@ -8,24 +7,15 @@ public class Player {
 	private	Square currentposition = new Square(1,"GO");
 	private	int money=1500;
 	
-	public Player(int playerID, String playerNames) {
+	public Player(int playerID) {
 		//super();
 		this.playerID = playerID;
 	}
-
-	public Player(String string) {
-		// TODO Auto-generated constructor stub
-	}
-
-	public Player(int i) {
-		// TODO Auto-generated constructor stub
-	}
-
+	
 	/**
 	 * @return the currentposition
 	 */
 	public Square getCurrentposition() {
-		
 		return currentposition;
 	}
 
@@ -44,13 +34,10 @@ public class Player {
 		this.money-=m;
 	}
 	
-	/* (non-Javadoc)
-	 * @see java.lang.Object#toString()
-	 */
 	@Override
 	public String toString() {
 		return "Player: "+ getPlayerName() + " [ doubleCounter=" + doubleCounter + ", playerID=" + playerID + 
-				", playercolor=" + playercolor + ", currentposition=" + currentposition.getSquareID()+"--"+
+				 ", currentposition=" + currentposition.getSquareID()+"--"+
 				currentposition.getSquareName() + ", money=" + money + " ]";
 	}
 
@@ -81,5 +68,4 @@ public class Player {
 	public void setPlayerID(int playerID) {
 		this.playerID = playerID;
 	}
-	
 }

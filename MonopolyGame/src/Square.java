@@ -1,4 +1,3 @@
-
 public class Square {
  
 	private String squareName = "";
@@ -6,10 +5,6 @@ public class Square {
 	public int lineUp=1;
 	private int squareID;
 	
-	public Square() {
-		this.lineUp=lineUp+1;
-	}
-
 	/**
 	 * @param squareID
 	 * @param squareName
@@ -19,9 +14,6 @@ public class Square {
 		this.squareName = squareName;
 		this.squareID = squareID;
 	}
-
-
-	
 	/**
 	 * @param squareID
 	 */
@@ -57,8 +49,4 @@ public class Square {
 	public void setSquareID(int squareID) {
 		this.squareID = squareID;
 	}
-
-	
-	
-	
 }
