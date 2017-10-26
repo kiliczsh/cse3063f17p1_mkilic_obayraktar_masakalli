@@ -1,3 +1,4 @@
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -8,8 +9,8 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class GameBoard {
 	public static int numOfPlayers;
-	final int MAX_PLAYER=8;
-	final int MIN_PLAYER=2;
+	//final int MAX_PLAYER=8;
+	//final int MIN_PLAYER=2;
 	Scanner input = new Scanner(System.in);
 	GameBoard gameBoard;
 	Dice dice1 = new Dice();
@@ -19,6 +20,10 @@ public class GameBoard {
 	Square[] squareList= createCells();
 	
 	
+	public GameBoard() {
+		
+	}
+		
 	public  Square[] createCells() {
 		ArrayList<Square> squareList = new ArrayList<Square>();
 		Square  square1,square2,square3,square4,square5,square6,square7,square8,square9,square10,
@@ -133,7 +138,12 @@ public class GameBoard {
 		return playingList;
 	}
 	
+<<<<<<< HEAD
 	public Player[] createPlayers(Scanner input,int numOfPlayers) {
+=======
+	public Player[] createPlayers(int numOfPlayers) {
+		
+>>>>>>> fb76ad32b59364a660a5dd5d25b65e4ad427496f
 		ArrayList<Player> playerList = new ArrayList<Player>();
 		int i=0;
 		for(i=1;i<=8;i++) {
@@ -142,9 +152,9 @@ public class GameBoard {
 		}
 		Player[] playerArray = playerList.toArray(new Player[8]);
 		return playerArray;
-	}
+	} 
 
-	public int getNumberOfPlayer(Scanner input,int MAX_PLAYER, int MIN_PLAYER) {
+	/*public int getNumberOfPlayer(Scanner input,int MAX_PLAYER, int MIN_PLAYER) {
 		input= new Scanner(System.in);
 		int numberOfPlayers = 0;
 		System.out.print("Enter number of players(2~8): ");
@@ -163,22 +173,19 @@ public class GameBoard {
 			getNumberOfPlayer(input, MAX_PLAYER, MIN_PLAYER);
 		}
 		setNumOfPlayers(numberOfPlayers);
-		return numberOfPlayers;
-	}
+		return numberOfPlayers; 
+	} */
 
 	/**
 	 * @return the numOfPlayers
 	 */
-	public static int getNumOfPlayers() {
-		return numOfPlayers;
-	}
 
 	/**
 	 * @param numOfPlayers the numOfPlayers to set
 	 */
 	public static void setNumOfPlayers(int numOfPlayers) {
 		GameBoard.numOfPlayers = numOfPlayers;
-	}
+	} 
 
 	/**
 	 * @return the squares
