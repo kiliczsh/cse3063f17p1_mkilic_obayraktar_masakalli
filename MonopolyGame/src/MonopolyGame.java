@@ -1,17 +1,48 @@
+import java.util.Scanner;
 public class MonopolyGame {
 	//main method
 	public static void main(String[] args) {
+		final int MAX_PLAYER=8;
+		final int MIN_PLAYER=2;
+		
+
+		Scanner input= new Scanner(System.in);
+		int numberOfPlayers = 0;
 		GameBoard gameBoard=new GameBoard();
+		System.out.print("Enter number of players(2~8): ");
+		if(input.hasNextInt()) {
+		    numberOfPlayers = input.nextInt();
+		    if (numberOfPlayers<=MAX_PLAYER && numberOfPlayers>=MIN_PLAYER) {
+		    	System.out.println(numberOfPlayers+" players will be on this game.");		    	
+		    	System.out.println("Game will start soon...");
+		    }else {
+		    	System.out.println("No way you don't deserve to play. First learn Math.");
+		    }
+		}else {
+			System.out.println("No way you don't deserve to play. First learn Math.");
+		}
+		
+		String playerNames[] = new String[numberOfPlayers];
+		
+		for(int i=0;i<numberOfPlayers;i++) {
+			System.out.print("Please enter the name of player"+(i+1)+":  ");
+			playerNames[i] = input.next();
+        }
+		GameBoard.numOfPlayers = numberOfPlayers;
 		startGame(gameBoard);
 	}
+
 	public static void startGame(GameBoard gameBoard) {
-		GameBoard.numOfPlayers=gameBoard.getNumberOfPlayer(gameBoard.input, gameBoard.MAX_PLAYER, gameBoard.MIN_PLAYER);
-		
+
+		// GameBoard.numOfPlayers yukarda gelen inputa eþitlendi, bu satýra gerek yok.
+		//GameBoard.numOfPlayers=gameBoard.getNumberOfPlayer(gameBoard.input, gameBoard.MAX_PLAYER, gameBoard.MIN_PLAYER);
 		for(int turn=1;turn<=5;turn++) {
 			System.out.println("This is "+turn+". Round.\n\n\n");
 			for(int i=0;i<GameBoard.numOfPlayers;i++) {
 				Player currentPlayer;
 				
+				
+			
 				gameBoard.playerList[i].toString();
 				currentPlayer = gameBoard.playerList[i];
 				System.out.println("\nBefore rolling dices: \n\n"+currentPlayer.toString()+"\n\n");
@@ -30,3 +61,5 @@ public class MonopolyGame {
 		}
 	}
 }
+
+

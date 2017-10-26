@@ -12,6 +12,10 @@ public class Player {
 		this.playerID = playerID;
 	}
 
+	public Player(String string) {
+		// TODO Auto-generated constructor stub
+	}
+
 	/**
 	 * @return the currentposition
 	 */
