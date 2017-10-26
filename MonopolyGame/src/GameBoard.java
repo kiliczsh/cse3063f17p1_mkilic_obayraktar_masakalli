@@ -1,16 +1,12 @@
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Random;
 import java.util.Scanner;
-import java.util.concurrent.ThreadLocalRandom;
+
 
 public class GameBoard {
+	//Declarations and Initilizations
 	public static int numOfPlayers;
-	//final int MAX_PLAYER=8;
-	//final int MIN_PLAYER=2;
 	Scanner input = new Scanner(System.in);
 	GameBoard gameBoard;
 	Dice dice1 = new Dice();
@@ -90,9 +86,6 @@ public class GameBoard {
 		}
 	}
 
-	
-
-	
 	public Player[] diceTournament(GameBoard gameBoard,Player[] playerList) {
 		for(int i=0;i<playerList.length;i++) {
 			playerList[i].diceTournamentValue = dice1.rollDice() + dice2.rollDice();
@@ -105,12 +98,8 @@ public class GameBoard {
 					   }
 				   }
 			}
-		}
-		
-		
+		}		
 		Player[] playingList = new Player[playerList.length];
-		
-	
 		int max=playerList[0].diceTournamentValue;
 		int min=playerList[0].diceTournamentValue;
 		for(int k=0;k<playerList.length;k++) {
@@ -138,12 +127,8 @@ public class GameBoard {
 		return playingList;
 	}
 	
-<<<<<<< HEAD
+
 	public Player[] createPlayers(Scanner input,int numOfPlayers) {
-=======
-	public Player[] createPlayers(int numOfPlayers) {
-		
->>>>>>> fb76ad32b59364a660a5dd5d25b65e4ad427496f
 		ArrayList<Player> playerList = new ArrayList<Player>();
 		int i=0;
 		for(i=1;i<=8;i++) {
@@ -176,9 +161,6 @@ public class GameBoard {
 		return numberOfPlayers; 
 	} */
 
-	/**
-	 * @return the numOfPlayers
-	 */
 
 	/**
 	 * @param numOfPlayers the numOfPlayers to set

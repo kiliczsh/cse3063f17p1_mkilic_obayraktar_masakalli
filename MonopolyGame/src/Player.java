@@ -8,12 +8,16 @@ public class Player {
 	private	Square currentposition = new Square(1,"GO");
 	private	int money=1500;
 	
-	public Player(int playerID) {
+	public Player(int playerID, String playerNames) {
 		//super();
 		this.playerID = playerID;
 	}
 
 	public Player(String string) {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Player(int i) {
 		// TODO Auto-generated constructor stub
 	}
 
