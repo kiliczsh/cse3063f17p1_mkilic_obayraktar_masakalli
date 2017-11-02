@@ -1,0 +1,31 @@
+In the second iteration, I would like to see that you implement different types of squares such as go square  and their actions, using polymorphism. Please note that you do NOT implement cards or properties such as houses/hotels. 
+
+Go square
+It is the first square in the board. At the beginning of the game, every player starts on this square and they start with $200 cash. Usually, as the players pass Go, they collect $200 but for your implementations, users can receive $200 only and only if land directly on Go square! 
+
+Jail square
+If in Jail, a player's turn is suspended until either the player rolls a double or pays to get out. If a player is 'Just Visiting', the Jail space is considered a 'safe' space, where nothing happens. Landing in Jail
+You land in Jail if:
+- Your piece lands on space marked "GO TO JAIL".
+- You roll Doubles three times in succession in one move.
+Notes:
+A player sent to Jail cannot collect $200 salary in that move since, regardless of where his/her piece is or of the path of the board, he/she must move his/her piece DIRECTLY into Jail. A player's turn ends when he is sent to Jail.
+Visiting Jail: The "Jail" Space on the classic board
+If a player is not "sent to Jail" but in the ordinary course of play reaches that space, he is "Just Visiting"; he incurs no penalty, and moves ahead in the usual manner on his/her next turn.
+To Get Out of Jail:
+A player gets out of Jail "early" by:
+Rolling Doubles on any of that player's next three turns in Jail. If a player succeeds in doing this, he or she immediately moves forward the number of spaces shown by the throw. Even if doubles are rolled, the player does NOT take another turn.
+Paying a $50 fine to the Bank BEFORE throwing the dice for either the first turn or the second turn in Jail.
+
+Free Parking square
+Free Parking is a corner square on the board diagonally opposite to Go. When a player lands here nothing happens and they move off the space on their next turn.
+
+Income Tax square
+Income Tax is the fourth square on a standard Monopoly set, and is one of the least-liked spaces on the board. When a player has the misfortune to land on the Income Tax space, he or she must pay 10% of their total assets which means total cash on hand.
+
+Luxury Tax square
+Luxury Tax is a space on the Monopoly Board nestled between Park Place and Boardwalk. Players who land on it must pay $75 to the Bank (reduce 75 from the cash of the player).
+
+You must run the simulation until a predefined (input parameter to your program) number of game iterations. A game iteration completes when all players takes their turns. At each turn of a player you must print its name (e.g. player 1), cash, current square, dice face values, dice total, landed square, and actions associated with the landed square. Don't wait for user input to continue. 
+
+A player go bankruptcy and removed from the game if her cash is reduced to 0 or below because of tax squares. If all players go bankruptcy before the predefined number of game iterations your game must halt.
