@@ -22,7 +22,11 @@ __*[Onur Bayraktar](https://github.com/onurbayraktar)-150114079*__ :rocket:
 
 ### Iteration 2 To Do List
 ##### Due Date : Thu, November 9, 14:00
-...
+- [ ] Go square,Jail square,Free Parking square,Income Tax square,Luxury Tax square,
+- [ ] 
+- [ ] 
+- [ ] 
+- [ ] 
 
 ### Iteration 3 To Do List
 ##### Due Date : Thu, November 23, 14:00
