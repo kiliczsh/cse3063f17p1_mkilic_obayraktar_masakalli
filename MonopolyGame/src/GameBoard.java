@@ -24,13 +24,13 @@ public class GameBoard {
 		squareList.add((square2 = new Square(2,"Property")));
 		squareList.add((square3 = new Square(3,"Community Chest")));
 		squareList.add((square4 = new Square(4,"Property")));
-		squareList.add((square5 = new Square(5,"Tax")));
+		squareList.add((square5 = new Square(5,"Income Tax")));//must pay %10 of total
 		squareList.add((square6 = new Square(6,"Railway")));
 		squareList.add((square7 = new Square(7,"Property")));
 		squareList.add((square8 = new Square(8,"Chance")));
 		squareList.add((square9 = new Square(9,"Property")));
 		squareList.add((square10 = new Square(10,"Property")));
-		squareList.add((square11 = new Square(11,"Jail")));
+		squareList.add((square11 = new Square(11,"Jail")));// first exit 
 		squareList.add((square12 = new Square(12,"Property")));
 		squareList.add((square13 = new Square(13,"Electric")));
 		squareList.add((square14 = new Square(14,"Property")));
@@ -40,7 +40,7 @@ public class GameBoard {
 		squareList.add((square18 = new Square(18,"Community Chest")));
 		squareList.add((square19 = new Square(19,"Property")));
 		squareList.add((square20 = new Square(20,"Property")));
-		squareList.add((square21 = new Square(21,"FreeParking")));
+		squareList.add((square21 = new Square(21,"Free Parking")));
 		squareList.add((square22 = new Square(22,"Property")));
 		squareList.add((square23 = new Square(23,"Chance")));
 		squareList.add((square24 = new Square(24,"Property")));
@@ -50,16 +50,16 @@ public class GameBoard {
 		squareList.add((square28 = new Square(28,"Property")));
 		squareList.add((square29 = new Square(29,"Water")));
 		squareList.add((square30 = new Square(30,"Property")));
-		squareList.add((square31 = new Square(31,"GoJail")));
+		squareList.add((square31 = new Square(31,"Go To Jail"))); // go to square 11
 		squareList.add((square32 = new Square(32,"Property")));
 		squareList.add((square33 = new Square(33,"Property")));
 		squareList.add((square34 = new Square(34,"Community Chest)")));
 		squareList.add((square35 = new Square(35,"Property")));
 		squareList.add((square36 = new Square(36,"Railway")));
 		squareList.add((square37 = new Square(37,"Chance")));
-		squareList.add((square38 = new Square(38,"Property")));
-		squareList.add((square39 = new Square(39,"Tax")));
-		squareList.add((square40 = new Square(40,"Property")));
+		squareList.add((square38 = new Square(38,"Property")));// Park Place
+		squareList.add((square39 = new Square(39,"Luxury Tax")));
+		squareList.add((square40 = new Square(40,"Property")));//Boardwalk
 		Square[] squareArray = squareList.toArray(new Square[40]);
 		return squareArray;
 	}
@@ -68,9 +68,20 @@ public class GameBoard {
 		Square currentCell= player.getCurrentposition();
 		int nextCellLoc=currentCell.getSquareID()+turnTotalMovement;
 		if(nextCellLoc>40) {
+			player.increaseMoney(200);
 			nextCellLoc= nextCellLoc%40;
 		}
-		player.setCurrentposition(getSquaresByID(nextCellLoc));
+		player.checkGo();
+		if(player.getCurrentposition().getSquareID()==31 || player.getCurrentposition().getSquareID()==11 ) {//Go To Jail
+			player.goToJail();
+		}
+		player.isInJail = player.checkJail();
+		if(player.isInJail) {
+			System.out.println(player.getPlayerName()+" is in Jail now.");
+		}else {
+			player.setCurrentposition(getSquaresByID(nextCellLoc));
+		}
+		
 	}
 
 	public Player[] diceTournament(GameBoard gameBoard,Player[] playerList) {
