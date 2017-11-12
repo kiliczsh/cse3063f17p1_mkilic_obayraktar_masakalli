@@ -1,52 +1,13 @@
-public class Square {
- 
-	private String squareName = "";
-	boolean isOccupied = false;
-	public int lineUp=1;
-	private int squareID;
+public abstract class Square {
+	String name;
 	
-	/**
-	 * @param squareID
-	 * @param squareName
-	 */
-	public Square(int squareID, String squareName) {
-		super();
-		this.squareName = squareName;
-		this.squareID = squareID;
+	public Square(String name) {
+		this.name = name;
 	}
-	/**
-	 * @param squareID
-	 */
-	public Square(int squareID) {
-		super();
-		this.squareID = squareID;
+	
+	public String getName() {
+		return name;
 	}
-
-	/**
-	 * @return the squareName
-	 */
-	public String getSquareName() {
-		return squareName;
-	}
-
-	/**
-	 * @param squareName the squareName to set
-	 */
-	public void setSquareName(String squareName) {
-		this.squareName = squareName;
-	}
-
-	/**
-	 * @return the squareID
-	 */
-	public int getSquareID() {
-		return squareID;
-	}
-
-	/**
-	 * @param squareID the squareID to set
-	 */
-	public void setSquareID(int squareID) {
-		this.squareID = squareID;
-	}
+	
+	public abstract void doAction(Player player, GameBoard board);
 }

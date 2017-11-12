@@ -1,47 +1,27 @@
-
 public class Money {
- private int initialAmount;
- private int salaryAmount;
- 
- public Money() {
-	 
- }
- /**
- * @return the initialAmount
- */
-public int getInitialAmount() {
-	return initialAmount;
-}
-
-
-/**
- * @param initialAmount the initialAmount to set
- */
-public void setInitialAmount(int initialAmount) {
-	this.initialAmount = initialAmount;
-}
-
-
-/**
- * @return the salaryAmount
- */
-public int getSalaryAmount() {
-	return salaryAmount;
-}
-
-
-/**
- * @param salaryAmount the salaryAmount to set
- */
-public void setSalaryAmount(int salaryAmount) {
-	this.salaryAmount = salaryAmount;
-}
-/* (non-Javadoc)
- * @see java.lang.Object#toString()
- */
-@Override
-public String toString() {
-	return "Money [initialAmount=" + initialAmount + ", salaryAmount=" + salaryAmount + "]";
-}
-
+	int money;
+	
+	public Money() {
+		this(0);
+	}
+	
+	public Money(int money) {
+		this.money = money;
+	}
+	
+	public int getMoney() {
+		return money;
+	}
+	
+	public void addMoney(int amount) {
+		money += amount;
+	}
+	
+	public void substractMoney(int amount) {
+		money -= amount;
+	}
+	
+	public boolean isBrokeOut() {
+		return money < 0;
+	}
 }

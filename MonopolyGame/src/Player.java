@@ -1,109 +1,67 @@
 public class Player {
-	int doubleCounter;
-	int diceTournamentValue=-1;
-	boolean onGame=true;
-	boolean isInJail=false;
-	private	int playerID;
-	private String playerName="Computer";
-	private	String playercolor="Red";
-	private	Square currentposition = new Square(1,"GO"); //beginning square
-	private	int playerMoney=200;//200$ cash
+	int totalWalk = 0;
+	int position = 0;
+	int id;
+	String name;
+	boolean brokeout = false;
+	Money playerMoney;
+	int doubleCounter=0;
 	
-	public Player(int playerID) {
-		//super();
-		this.playerID = playerID;
+	public Player(int id, String name) {
+		this.id = id;
+		this.name = name;
+		this.playerMoney = new Money(5000);
 	}
 	
-	public void checkGo() {
-		Square goSquare=new Square(1,"GO");
-		if(this.currentposition.equals(goSquare)) {
-			increaseMoney(200);
-		}
+	public int getTotalWalk() {
+		return totalWalk;
 	}
-	public boolean checkJail() {
-		Square jailSquare = new Square(11,"Jail");
-		if(this.currentposition.equals(jailSquare)) {
-			System.out.println(this.playerName + " is in Jail. ");
-			return true;
+	
+	public int tossDie(Dice die1,Dice die2) {
+		int face1 = die1.getFace();
+		int face2 = die2.getFace();
+		if(face1%2==0 && face2%2==0 && face1==face2) {
+			doubleCounter++;
 		}else {
-			return false;
+			doubleCounter=0;
 		}
-	}
-	public void goToJail() {
-		this.currentposition= new Square(11,"Jail");// Jail
-	}
+		System.out.println("\nTurn : "+(getTotalWalk() + 1)+ " - "+name+"\n");
+		System.out.println("[Position: " + (getCurrentPosition()+1) + "] [Total Money: $" + getMoney().getMoney() + "] " + getName() + " toss a die... Faces are [" + face1+","+face2+"] = "+(face1+face2));
 	
-	public void payTax() {
-		int taxAmount=0;
-		if(this.currentposition.getSquareID()==39) {//Luxury Tax
-			taxAmount=75;
-		}else if(this.currentposition.getSquareID()==5) {//Income Tax
-			taxAmount=Math.round(this.playerMoney/100);
-		}else {
-			System.err.println("Error at Tax charging in Player Class");
-		}
 		
-		System.out.println(this.playerName + " will pay "+ taxAmount +" $ tax at " +this.currentposition.getSquareName()+".\n Charging...");
-		decreaseMoney(taxAmount);
-		if(this.playerMoney<=0) {
-			System.out.println(this.playerName+" is out of money.");
-			
-		}
-	}
-	/**
-	 * @return the currentposition
-	 */
-	public Square getCurrentposition() {
-		return currentposition;
-	}
-
-	/**
-	 * @param currentposition the currentposition to set
-	 */
-	public void setCurrentposition(Square currentposition) {
-		this.currentposition = currentposition;
+		
+		return (face1+face2);
 	}
 	
-	public void increaseMoney(int amount) {
-		this.playerMoney+=amount;
+	public int getCurrentPosition() {
+		return position;
 	}
 	
-	public void decreaseMoney(int amount) {
-		this.playerMoney-=amount;
+	public void setPosition(int position) {
+		this.position = position;
 	}
 	
-	@Override
-	public String toString() {
-		return "Player ID: "+ playerID + " Name: "+ getPlayerName()+" Position: "+currentposition.getSquareID()+"--"+
-				currentposition.getSquareName() + " [Money: "+ playerMoney+"]";
-
+	public void nextTurn() {
+		totalWalk++;
 	}
-
-	/**
-	 * @return the playerName
-	 */
-	public String getPlayerName() {
-		return playerName;
+	
+	public String getName() {
+		return name;
 	}
-
-	/**
-	 * @param playerName the playerName to set
-	 */
-	public void setPlayerName(String playerName) {
-		this.playerName = playerName;
+	
+	public Money getMoney() {
+		return playerMoney;
 	}
-
-	/**
-	 * @return the playerID
-	 */
-	public int getPlayerID() {
-		return playerID;
+	
+	public int getID() {
+		return id;
 	}
-
-	/**
-	 * @param playerID the playerID to set
-	 */
-	public void setPlayerID(int playerID) {
-		this.playerID = playerID;
+	
+	public void setBrokeOut(boolean brokeout) {
+		this.brokeout = brokeout;
+	}
+	
+	public boolean isBrokeOut() {
+		return brokeout;
 	}
 }
