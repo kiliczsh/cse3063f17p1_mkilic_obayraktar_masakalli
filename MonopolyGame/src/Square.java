@@ -1,4 +1,6 @@
 public abstract class Square {
+	
+	int price;
 	String name;
 	
 	public Square(String name) {

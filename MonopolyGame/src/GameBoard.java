@@ -6,7 +6,7 @@ public class GameBoard {
 	int totalPlayer = 0;
 	Player[] players;
 	Square[] squares = new Square[40];
-	String[] names = new String[] { "Property", "Community Chest", "Railway", "City", "Peace", "Village"};
+	//String[] names = new String[] { "Property", "Community Chest", "Railway", "City", "Peace", "Village"};
 	
 	public GameBoard(int totalPlayer) {
 		players = new Player[totalPlayer];
@@ -28,16 +28,28 @@ public class GameBoard {
 				squares[i] = new GoSquare("GO");
 			}else if(i == 5) {
 				squares[i] = new IncomeTaxSquare("Income Tax");
+			}else if(i == 6) {
+				squares[i] = new RailroadSquare("RailRoad1");
 			}else if(i == 11){
 				squares[i] = new JailSquare("Jail");
+			}else if(i == 13){
+				squares[i] = new UtilitySquare("ElectricUtility");
+			}else if(i == 16) {
+				squares[i] = new RailroadSquare("RailRoad2");
 			}else if(i == 21){
 				squares[i] = new FreeParkingSquare("Free Parking");
+			}else if(i == 26) {
+				squares[i] = new RailroadSquare("RailRoad3");
+			}else if(i == 29){
+				squares[i] = new UtilitySquare("WaterUtility");
 			}else if(i == 31){
 				squares[i] = new GoToJailSquare("Go to Jail");
+			}else if(i == 36) {
+				squares[i] = new RailroadSquare("RailRoad4");
 			}else if(i == 39) {
 				squares[i] = new LuxuryTaxSquare("Luxury Tax");
 			}else{
-				squares[i] = new NormalSquare(names[rand.nextInt(names.length)] + " " + names[rand.nextInt(names.length)], 400 + rand.nextInt(300));
+				squares[i] = new NormalSquare("Square"+i, 400 + rand.nextInt(300));
 			}
 		}
 	}
