@@ -3,6 +3,14 @@ public class GoSquare extends Square {
 		super(name);
 	}
 	
+
+
+	public GoSquare(String string, int i) {
+		super(string,i);
+	}
+
+
+
 	@Override
 	public void doAction(Player player, GameBoard board) {
 		player.getMoney().addMoney(200);
