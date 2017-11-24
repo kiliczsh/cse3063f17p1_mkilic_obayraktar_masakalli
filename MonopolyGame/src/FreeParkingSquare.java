@@ -3,6 +3,11 @@ public class FreeParkingSquare extends Square {
 		super(name);
 	}
 	
+	public FreeParkingSquare(String string, int i) {
+		// TODO Auto-generated constructor stub
+		super(string,i);
+	}
+
 	@Override
 	public void doAction(Player player, GameBoard gameBoard) {
 		System.out.println("[Position: " + (player.getCurrentPosition()+1) + "] [Total Money: $" + player.getMoney().getMoney() + "] " + player.getName() + " has to wait at " + name + " Square");

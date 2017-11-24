@@ -3,6 +3,11 @@ public class JailSquare extends Square {
 		super(name);
 	}
 	
+	public JailSquare(String string, int i) {
+		// TODO Auto-generated constructor stub
+		super(string,i);
+	}
+
 	@Override
 	public void doAction(Player player, GameBoard board) {
 		player.getMoney().substractMoney(500);

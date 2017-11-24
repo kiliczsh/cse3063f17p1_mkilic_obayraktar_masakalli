@@ -1,10 +1,9 @@
-import java.util.Random;
 
 public class NormalSquare extends Square {
 
 	
-	public NormalSquare(String name,int squareID,int price) {
-		super(name,squareID,price);
+	public NormalSquare(String name,int squareID,int price,int rent) {
+		super(name,squareID,price,rent);
 	}
 	
 

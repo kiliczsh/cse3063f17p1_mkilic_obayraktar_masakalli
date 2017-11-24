@@ -1,14 +1,16 @@
+import java.util.Objects;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class GameBoard {
+	int activePlayers;
 	int currentTurn = 0;
 	int totalPlayer = 0;
 	Player[] players;
 	Square[] squares = new Square[40];
-	//String[] names = new String[] { "Property", "Community Chest", "Railway", "City", "Peace", "Village"};
 	
-	public GameBoard(int totalPlayer) {
+	public GameBoard(int totalPlayer,int initialCash, String[][] squareInfo) {
+		activePlayers=totalPlayer;
 		players = new Player[totalPlayer];
 		this.totalPlayer = totalPlayer;
 		for(int i = 0;i < players.length;i++){
@@ -19,37 +21,50 @@ public class GameBoard {
 		System.out.println("Dice Tournament Results");
 		for(Player player:players) {
 			System.out.print(a+": "+player.getName()+"\n");
+			player.getMoney().setMoney(initialCash);
 			a++;
 		}
 		System.out.println();
-		Random rand = new Random();
 		for(int i = 0;i < squares.length;i++){
 			if(i == 0){
-				squares[i] = new GoSquare("GO");
+				squares[i] = new GoSquare("GO",i);
 			}else if(i == 5) {
-				squares[i] = new IncomeTaxSquare("Income Tax");
+				squares[i] = new IncomeTaxSquare("Income Tax",i);
 			}else if(i == 6) {
-				squares[i] = new RailroadSquare("RailRoad1");
+				squares[i] = new RailroadSquare("RailRoad1",i,200);
 			}else if(i == 11){
-				squares[i] = new JailSquare("Jail");
+				squares[i] = new JailSquare("Jail",i);
 			}else if(i == 13){
-				squares[i] = new UtilitySquare("ElectricUtility");
+				squares[i] = new UtilitySquare("ElectricUtility",i,150);
 			}else if(i == 16) {
-				squares[i] = new RailroadSquare("RailRoad2");
+				squares[i] = new RailroadSquare("RailRoad2",i,200);
 			}else if(i == 21){
-				squares[i] = new FreeParkingSquare("Free Parking");
+				squares[i] = new FreeParkingSquare("Free Parking",i);
 			}else if(i == 26) {
-				squares[i] = new RailroadSquare("RailRoad3");
+				squares[i] = new RailroadSquare("RailRoad3",i,200);
 			}else if(i == 29){
-				squares[i] = new UtilitySquare("WaterUtility");
+				squares[i] = new UtilitySquare("WaterUtility",i,150);
 			}else if(i == 31){
-				squares[i] = new GoToJailSquare("Go to Jail");
+				squares[i] = new GoToJailSquare("Go to Jail",i);
 			}else if(i == 36) {
-				squares[i] = new RailroadSquare("RailRoad4");
+				squares[i] = new RailroadSquare("RailRoad4",i,200);
 			}else if(i == 39) {
-				squares[i] = new LuxuryTaxSquare("Luxury Tax");
-			}else{
-				squares[i] = new NormalSquare("Square"+i, 400 + rand.nextInt(300));
+				squares[i] = new LuxuryTaxSquare("Luxury Tax",i);
+			}else {
+				for(int c=0;c<39;c++) {
+
+					if(Objects.equals(i, squareInfo[c][0])) {
+						String sName="Square"+squareInfo[i][0];
+						int sPosition= Integer.parseInt(squareInfo[i][0]);
+						int sPrice=Integer.parseInt(squareInfo[i][1]);
+						int sRent=Integer.parseInt(squareInfo[i][2]);
+						squares[i] = new NormalSquare(sName,sPosition,sPrice,sRent);
+						
+					}else {
+						squares[i] = new NormalSquare("Square"+i,i,200,100);
+					}
+				}
+				
 			}
 		}
 	}
@@ -70,6 +85,12 @@ public class GameBoard {
 			System.out.println("\nTurn : "+(player.getTotalWalk() + 1)+ " - "+player.name+"\n");
 			System.out.println("[Position: " + (player.getCurrentPosition()+1) + "] [Total Money: $" + player.getMoney().getMoney() + "] " + player.getName() + " has been broke out!");
 			player.setBrokeOut(true);
+			activePlayers--;
+			for(int a=0;a<squares.length;a++) {// free squares of broken player
+				if(squares[a].owner==null || squares[a].owner.getID()==player.getID()) {
+					squares[a].owner=null;
+				}
+			}
 		}else{
 			if(count){
 				player.nextTurn();

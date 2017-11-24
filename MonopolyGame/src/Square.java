@@ -14,12 +14,19 @@ public abstract class Square {
 		this.name=name;
 		this.squareID=squareID;
 	}
-	public Square(String name,int squareID,int price) {
+	public Square(String name,int squareID,int price,int rent) {
+		this.name=name;
+		this.squareID=squareID;
+		this.price=price;
+		this.rent=rent;
+	}
+	
+	public Square(String name, int squareID, int price) {
 		this.name=name;
 		this.squareID=squareID;
 		this.price=price;
 	}
-	
+
 	public String getName() {
 		return name;
 	}

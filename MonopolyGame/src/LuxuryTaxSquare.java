@@ -5,6 +5,11 @@ public class LuxuryTaxSquare extends Square {
 		super(name);
 	}
 
+	public LuxuryTaxSquare(String string, int i) {
+		// TODO Auto-generated constructor stub
+		super(string,i);
+	}
+
 	@Override
 	public void doAction(Player player, GameBoard board) {
 		int taxAmount= 75;
