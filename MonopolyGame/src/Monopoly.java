@@ -21,6 +21,8 @@ public class Monopoly {
 				totalPlayer = scanner.nextInt();
 				System.out.println("Enter number of turns you want to simulate:");
 				turnNumber = scanner.nextInt();
+				
+				
 				if(!(turnNumber>=1 && turnNumber<=100)) {
 					turnNumber=10;
 				}
