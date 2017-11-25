@@ -1,3 +1,5 @@
+import java.io.PrintWriter;
+
 public abstract class Square {
 	
 	int price=0;
@@ -39,5 +41,5 @@ public abstract class Square {
 		return owner;
 	}
 	
-	public abstract void doAction(Player player, GameBoard board);
+	public abstract void doAction(Player player, GameBoard board,PrintWriter printer);
 }

@@ -1,3 +1,4 @@
+import java.io.PrintWriter;
 import java.util.Objects;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
@@ -9,7 +10,7 @@ public class GameBoard {
 	Player[] players;
 	Square[] squares = new Square[40];
 	
-	public GameBoard(int totalPlayer,int initialCash, String[][] squareInfo) {
+	public GameBoard(int totalPlayer,int initialCash, String[][] squareInfo,PrintWriter printer) {
 		activePlayers=totalPlayer;
 		players = new Player[totalPlayer];
 		this.totalPlayer = totalPlayer;
@@ -19,8 +20,10 @@ public class GameBoard {
 		shuffleArray(players);
 		int a =1;
 		System.out.println("Dice Tournament Results");
+		printer.write("Dice Tournament Results\n");
 		for(Player player:players) {
 			System.out.print(a+": "+player.getName()+"\n");
+			printer.write(a+": "+player.getName()+"\n");
 			player.getMoney().setMoney(initialCash);
 			a++;
 		}
@@ -69,21 +72,24 @@ public class GameBoard {
 		}
 	}
 	
-	public Square movePlayer(Player player, int face) {
-		return movePlayer(player, face, true);
+	public Square movePlayer(Player player, int face,PrintWriter printer) {
+		return movePlayer(player, face, true,printer);
 	}
 	
-	public Square movePlayer(Player player, int face, boolean count) {
+	public Square movePlayer(Player player, int face, boolean count,PrintWriter printer) {
 		if(player.isBrokeOut() ){
 			return squares[player.getCurrentPosition()]; 
 		}
 		int newPosition = normalizePosition(player.getCurrentPosition() + face);
 		player.setPosition(newPosition);
 		System.out.println("[Position: " + (player.getCurrentPosition()+1) + "] [Total Money: $" + player.getMoney().getMoney() + "] " +  player.getName() + " goes to " + squares[player.getCurrentPosition()].getName());
-		squares[newPosition].doAction(player, this);
+		printer.write("[Position: " + (player.getCurrentPosition()+1) + "] [Total Money: $" + player.getMoney().getMoney() + "] " +  player.getName() + " goes to " + squares[player.getCurrentPosition()].getName()+"\n");
+		squares[newPosition].doAction(player, this, printer);
 		if(player.getMoney().isBrokeOut()){
 			System.out.println("\nTurn : "+(player.getTotalWalk() + 1)+ " - "+player.name+"\n");
+			printer.write("\nTurn : "+(player.getTotalWalk() + 1)+ " - "+player.name+"\n");
 			System.out.println("[Position: " + (player.getCurrentPosition()+1) + "] [Total Money: $" + player.getMoney().getMoney() + "] " + player.getName() + " has been broke out!");
+			printer.write("[Position: " + (player.getCurrentPosition()+1) + "] [Total Money: $" + player.getMoney().getMoney() + "] " + player.getName() + " has been broke out!\n");
 			player.setBrokeOut(true);
 			activePlayers--;
 			for(int a=0;a<squares.length;a++) {// free squares of broken player

@@ -1,651 +1,269 @@
-	Monopoly
-
+Hello	Monopoly
 How many people are playing?
-Players (2 - 8): Enter initial cash value: 
+Players (2 - 8): 3
+Enter initial cash value:  $100
 Dice Tournament Results
-1: Player 5
-2: Player 4
-3: Player 7
-4: Player 8
-5: Player 3
-6: Player 2
-7: Player 1
-8: Player 6
-
+1: Player 1
+2: Player 3
+3: Player 2
 ----------
-
-Turn : 1 - Player 5
-
-[Position: 1] [Total Money: $100] Player 5 toss a die... Faces are [5,2] = 7
-[Position: 8] [Total Money: $100] Player 5 goes to Square7
-There is no owner of Square7.
-Player 5 can't buy Square7
-Player 5: [Position: 8] [Total Money: $100] 
-
-Turn : 1 - Player 4
-
-[Position: 1] [Total Money: $100] Player 4 toss a die... Faces are [1,4] = 5
-[Position: 6] [Total Money: $100] Player 4 goes to Income Tax
-[Position: 6] [Total Money: $90] Player 4, will pay 10 income tax.
-
-Turn : 1 - Player 7
-
-[Position: 1] [Total Money: $100] Player 7 toss a die... Faces are [6,5] = 11
-[Position: 12] [Total Money: $100] Player 7 goes to Jail
-[Position: 12] [Total Money: $-400] Player 7 has been Jail and lost 500 money
-
-Turn : 1 - Player 7
-
-[Position: 12] [Total Money: $-400] Player 7 has been broke out!
-
-Turn : 1 - Player 8
-
-[Position: 1] [Total Money: $100] Player 8 toss a die... Faces are [3,1] = 4
-[Position: 5] [Total Money: $100] Player 8 goes to Square4
-There is no owner of Square4.
-Player 8 can't buy Square4
-Player 8: [Position: 5] [Total Money: $100] 
-
-Turn : 1 - Player 3
-
-[Position: 1] [Total Money: $100] Player 3 toss a die... Faces are [6,2] = 8
-[Position: 9] [Total Money: $100] Player 3 goes to Square8
-There is no owner of Square8.
-Player 3 can't buy Square8
-Player 3: [Position: 9] [Total Money: $100] 
-
-Turn : 1 - Player 2
-
-[Position: 1] [Total Money: $100] Player 2 toss a die... Faces are [3,1] = 4
-[Position: 5] [Total Money: $100] Player 2 goes to Square4
-There is no owner of Square4.
-Player 2 can't buy Square4
-Player 2: [Position: 5] [Total Money: $100] 
 
 Turn : 1 - Player 1
+[Position: 1] [Total Money: $100] Player 1 toss a die... Faces are [5,2] = 7[Position: 8] [Total Money: $100] Player 1 goes to Square7
+There is no owner of Square7.Player 1 can't buy Square7Player 1: [Position: 8] [Total Money: $100] 
+*
 
-[Position: 1] [Total Money: $100] Player 1 toss a die... Faces are [1,6] = 7
-[Position: 8] [Total Money: $100] Player 1 goes to Square7
-There is no owner of Square7.
-Player 1 can't buy Square7
-Player 1: [Position: 8] [Total Money: $100] 
+Turn : 1 - Player 3
+[Position: 1] [Total Money: $100] Player 3 toss a die... Faces are [4,6] = 10[Position: 11] [Total Money: $100] Player 3 goes to Square10
+There is no owner of Square10.Player 3 can't buy Square10Player 3: [Position: 11] [Total Money: $100] 
+*
 
-Turn : 1 - Player 6
-
-[Position: 1] [Total Money: $100] Player 6 toss a die... Faces are [2,1] = 3
-[Position: 4] [Total Money: $100] Player 6 goes to Square3
-There is no owner of Square3.
-Player 6 can't buy Square3
-Player 6: [Position: 4] [Total Money: $100] 
-
-Turn : 2 - Player 5
-
-[Position: 8] [Total Money: $100] Player 5 toss a die... Faces are [4,4] = 8
-[Position: 16] [Total Money: $100] Player 5 goes to Square15
-There is no owner of Square15.
-Player 5 can't buy Square15
-Player 5: [Position: 16] [Total Money: $100] 
-
-Turn : 2 - Player 4
-
-[Position: 6] [Total Money: $90] Player 4 toss a die... Faces are [6,4] = 10
-[Position: 16] [Total Money: $90] Player 4 goes to Square15
-There is no owner of Square15.
-Player 4 can't buy Square15
-Player 4: [Position: 16] [Total Money: $90] 
-
-Turn : 2 - Player 8
-
-[Position: 5] [Total Money: $100] Player 8 toss a die... Faces are [6,1] = 7
-[Position: 12] [Total Money: $100] Player 8 goes to Jail
-[Position: 12] [Total Money: $-400] Player 8 has been Jail and lost 500 money
-
-Turn : 2 - Player 8
-
-[Position: 12] [Total Money: $-400] Player 8 has been broke out!
-
-Turn : 2 - Player 3
-
-[Position: 9] [Total Money: $100] Player 3 toss a die... Faces are [6,6] = 12
-[Position: 21] [Total Money: $100] Player 3 goes to Square20
-There is no owner of Square20.
-Player 3 can't buy Square20
-Player 3: [Position: 21] [Total Money: $100] 
-
-Turn : 2 - Player 2
-
-[Position: 5] [Total Money: $100] Player 2 toss a die... Faces are [2,2] = 4
-[Position: 9] [Total Money: $100] Player 2 goes to Square8
-There is no owner of Square8.
-Player 2 can't buy Square8
-Player 2: [Position: 9] [Total Money: $100] 
+Turn : 1 - Player 2
+[Position: 1] [Total Money: $100] Player 2 toss a die... Faces are [5,4] = 9[Position: 10] [Total Money: $100] Player 2 goes to Square9
+There is no owner of Square9.Player 2 can't buy Square9Player 2: [Position: 10] [Total Money: $100] 
+*
 
 Turn : 2 - Player 1
+[Position: 8] [Total Money: $100] Player 1 toss a die... Faces are [6,5] = 11[Position: 19] [Total Money: $100] Player 1 goes to Square18
+There is no owner of Square18.Player 1 can't buy Square18Player 1: [Position: 19] [Total Money: $100] 
+*
 
-[Position: 8] [Total Money: $100] Player 1 toss a die... Faces are [3,4] = 7
-[Position: 15] [Total Money: $100] Player 1 goes to Square14
-There is no owner of Square14.
-Player 1 can't buy Square14
-Player 1: [Position: 15] [Total Money: $100] 
+Turn : 2 - Player 3
+[Position: 11] [Total Money: $100] Player 3 toss a die... Faces are [1,1] = 2[Position: 13] [Total Money: $100] Player 3 goes to Square12
+There is no owner of Square12.Player 3 can't buy Square12Player 3: [Position: 13] [Total Money: $100] 
+*
 
-Turn : 2 - Player 6
-
-[Position: 4] [Total Money: $100] Player 6 toss a die... Faces are [6,3] = 9
-[Position: 13] [Total Money: $100] Player 6 goes to Square12
-There is no owner of Square12.
-Player 6 can't buy Square12
-Player 6: [Position: 13] [Total Money: $100] 
-
-Turn : 3 - Player 5
-
-[Position: 16] [Total Money: $100] Player 5 toss a die... Faces are [3,5] = 8
-[Position: 24] [Total Money: $100] Player 5 goes to Square23
-There is no owner of Square23.
-Player 5 can't buy Square23
-Player 5: [Position: 24] [Total Money: $100] 
-
-Turn : 3 - Player 4
-
-[Position: 16] [Total Money: $90] Player 4 toss a die... Faces are [2,5] = 7
-[Position: 23] [Total Money: $90] Player 4 goes to Square22
-There is no owner of Square22.
-Player 4 can't buy Square22
-Player 4: [Position: 23] [Total Money: $90] 
-
-Turn : 3 - Player 3
-
-[Position: 21] [Total Money: $100] Player 3 toss a die... Faces are [4,4] = 8
-[Position: 29] [Total Money: $100] Player 3 goes to Square28
-There is no owner of Square28.
-Player 3 can't buy Square28
-Player 3: [Position: 29] [Total Money: $100] 
-
-Turn : 3 - Player 2
-
-[Position: 9] [Total Money: $100] Player 2 toss a die... Faces are [2,1] = 3
-[Position: 12] [Total Money: $100] Player 2 goes to Jail
-[Position: 12] [Total Money: $-400] Player 2 has been Jail and lost 500 money
-
-Turn : 3 - Player 2
-
-[Position: 12] [Total Money: $-400] Player 2 has been broke out!
+Turn : 2 - Player 2
+[Position: 10] [Total Money: $100] Player 2 toss a die... Faces are [5,4] = 9[Position: 19] [Total Money: $100] Player 2 goes to Square18
+There is no owner of Square18.Player 2 can't buy Square18Player 2: [Position: 19] [Total Money: $100] 
+*
 
 Turn : 3 - Player 1
+[Position: 19] [Total Money: $100] Player 1 toss a die... Faces are [6,1] = 7[Position: 26] [Total Money: $100] Player 1 goes to Square25
+There is no owner of Square25.Player 1 can't buy Square25Player 1: [Position: 26] [Total Money: $100] 
+*
 
-[Position: 15] [Total Money: $100] Player 1 toss a die... Faces are [3,4] = 7
-[Position: 22] [Total Money: $100] Player 1 goes to Free Parking
-[Position: 22] [Total Money: $100] Player 1 has to wait at Free Parking Square
+Turn : 3 - Player 3
+[Position: 13] [Total Money: $100] Player 3 toss a die... Faces are [4,4] = 8[Position: 21] [Total Money: $100] Player 3 goes to Square20
+There is no owner of Square20.Player 3 can't buy Square20Player 3: [Position: 21] [Total Money: $100] 
+*
 
-Turn : 3 - Player 6
-
-[Position: 13] [Total Money: $100] Player 6 toss a die... Faces are [1,5] = 6
-[Position: 19] [Total Money: $100] Player 6 goes to Square18
-There is no owner of Square18.
-Player 6 can't buy Square18
-Player 6: [Position: 19] [Total Money: $100] 
-
-Turn : 4 - Player 5
-
-[Position: 24] [Total Money: $100] Player 5 toss a die... Faces are [2,1] = 3
-[Position: 27] [Total Money: $100] Player 5 goes to RailRoad3
-There is no owner of RailRoad3.
-Player 5 can't buy RailRoad3
-Player 5: [Position: 27] [Total Money: $100] 
-
-Turn : 4 - Player 4
-
-[Position: 23] [Total Money: $90] Player 4 toss a die... Faces are [6,3] = 9
-[Position: 32] [Total Money: $90] Player 4 goes to Go to Jail
-[Position: 12] [Total Money: $90] Player 4 is in Jail
-
-Turn : 4 - Player 3
-
-[Position: 29] [Total Money: $100] Player 3 toss a die... Faces are [1,5] = 6
-[Position: 35] [Total Money: $100] Player 3 goes to Square34
-There is no owner of Square34.
-Player 3 can't buy Square34
-Player 3: [Position: 35] [Total Money: $100] 
+Turn : 3 - Player 2
+[Position: 19] [Total Money: $100] Player 2 toss a die... Faces are [6,3] = 9[Position: 28] [Total Money: $100] Player 2 goes to Square27
+There is no owner of Square27.Player 2 can't buy Square27Player 2: [Position: 28] [Total Money: $100] 
+*
 
 Turn : 4 - Player 1
+[Position: 26] [Total Money: $100] Player 1 toss a die... Faces are [4,6] = 10[Position: 36] [Total Money: $100] Player 1 goes to Square35
+There is no owner of Square35.Player 1 can't buy Square35Player 1: [Position: 36] [Total Money: $100] 
+*
 
-[Position: 22] [Total Money: $100] Player 1 toss a die... Faces are [2,6] = 8
-[Position: 30] [Total Money: $100] Player 1 goes to WaterUtility
-There is no owner of WaterUtility.
-Player 1 can't buy WaterUtility
-Player 1: [Position: 30] [Total Money: $100] 
+Turn : 4 - Player 3
+[Position: 21] [Total Money: $100] Player 3 toss a die... Faces are [5,3] = 8[Position: 29] [Total Money: $100] Player 3 goes to Square28
+There is no owner of Square28.Player 3 can't buy Square28Player 3: [Position: 29] [Total Money: $100] 
+*
 
-Turn : 4 - Player 6
-
-[Position: 19] [Total Money: $100] Player 6 toss a die... Faces are [3,6] = 9
-[Position: 28] [Total Money: $100] Player 6 goes to Square27
-There is no owner of Square27.
-Player 6 can't buy Square27
-Player 6: [Position: 28] [Total Money: $100] 
-
-Turn : 5 - Player 5
-
-[Position: 27] [Total Money: $100] Player 5 toss a die... Faces are [3,5] = 8
-[Position: 35] [Total Money: $100] Player 5 goes to Square34
-There is no owner of Square34.
-Player 5 can't buy Square34
-Player 5: [Position: 35] [Total Money: $100] 
-
-Turn : 5 - Player 4
-
-[Position: 12] [Total Money: $90] Player 4 toss a die... Faces are [3,1] = 4
-[Position: 16] [Total Money: $90] Player 4 goes to Square15
-There is no owner of Square15.
-Player 4 can't buy Square15
-Player 4: [Position: 16] [Total Money: $90] 
-
-Turn : 5 - Player 3
-
-[Position: 35] [Total Money: $100] Player 3 toss a die... Faces are [4,5] = 9
-[Position: 4] [Total Money: $100] Player 3 goes to Square3
-There is no owner of Square3.
-Player 3 can't buy Square3
-Player 3: [Position: 4] [Total Money: $100] 
+Turn : 4 - Player 2
+[Position: 28] [Total Money: $100] Player 2 toss a die... Faces are [4,5] = 9[Position: 37] [Total Money: $100] Player 2 goes to RailRoad4
+There is no owner of RailRoad4.Player 2 can't buy RailRoad4Player 2: [Position: 37] [Total Money: $100] 
+*
 
 Turn : 5 - Player 1
+[Position: 36] [Total Money: $100] Player 1 toss a die... Faces are [1,1] = 2[Position: 38] [Total Money: $100] Player 1 goes to Square37
+There is no owner of Square37.Player 1 can't buy Square37Player 1: [Position: 38] [Total Money: $100] 
+*
 
-[Position: 30] [Total Money: $100] Player 1 toss a die... Faces are [1,1] = 2
-[Position: 32] [Total Money: $100] Player 1 goes to Go to Jail
-[Position: 12] [Total Money: $100] Player 1 is in Jail
+Turn : 5 - Player 3
+[Position: 29] [Total Money: $100] Player 3 toss a die... Faces are [5,3] = 8[Position: 37] [Total Money: $100] Player 3 goes to RailRoad4
+There is no owner of RailRoad4.Player 3 can't buy RailRoad4Player 3: [Position: 37] [Total Money: $100] 
+*
 
-Turn : 5 - Player 6
+Turn : 5 - Player 2
+[Position: 37] [Total Money: $100] Player 2 toss a die... Faces are [2,1] = 3[Position: 40] [Total Money: $100] Player 2 goes to Luxury Tax
+[Position: 40] [Total Money: $25] Player 2, will pay 75 luxury tax.
 
-[Position: 28] [Total Money: $100] Player 6 toss a die... Faces are [4,3] = 7
-[Position: 35] [Total Money: $100] Player 6 goes to Square34
-There is no owner of Square34.
-Player 6 can't buy Square34
-Player 6: [Position: 35] [Total Money: $100] 
-
-Turn : 6 - Player 5
-
-[Position: 35] [Total Money: $100] Player 5 toss a die... Faces are [4,2] = 6
-[Position: 1] [Total Money: $100] Player 5 goes to GO
-[Position: 1] [Total Money: $300] Player 5 is at Go... Giving $200
-
-Turn : 6 - Player 4
-
-[Position: 16] [Total Money: $90] Player 4 toss a die... Faces are [1,2] = 3
-[Position: 19] [Total Money: $90] Player 4 goes to Square18
-There is no owner of Square18.
-Player 4 can't buy Square18
-Player 4: [Position: 19] [Total Money: $90] 
-
-Turn : 6 - Player 3
-
-[Position: 4] [Total Money: $100] Player 3 toss a die... Faces are [6,3] = 9
-[Position: 13] [Total Money: $100] Player 3 goes to Square12
-There is no owner of Square12.
-Player 3 can't buy Square12
-Player 3: [Position: 13] [Total Money: $100] 
+*
 
 Turn : 6 - Player 1
+[Position: 38] [Total Money: $100] Player 1 toss a die... Faces are [4,1] = 5[Position: 3] [Total Money: $100] Player 1 goes to Square2
+There is no owner of Square2.Player 1 can't buy Square2Player 1: [Position: 3] [Total Money: $100] 
+*
 
-[Position: 12] [Total Money: $100] Player 1 toss a die... Faces are [1,6] = 7
-[Position: 19] [Total Money: $100] Player 1 goes to Square18
-There is no owner of Square18.
-Player 1 can't buy Square18
-Player 1: [Position: 19] [Total Money: $100] 
+Turn : 6 - Player 3
+[Position: 37] [Total Money: $100] Player 3 toss a die... Faces are [3,6] = 9[Position: 6] [Total Money: $100] Player 3 goes to Income Tax
+[Position: 6] [Total Money: $90] Player 3, will pay 10 income tax.
 
-Turn : 6 - Player 6
+*
 
-[Position: 35] [Total Money: $100] Player 6 toss a die... Faces are [5,1] = 6
-[Position: 1] [Total Money: $100] Player 6 goes to GO
-[Position: 1] [Total Money: $300] Player 6 is at Go... Giving $200
-
-Turn : 7 - Player 5
-
-[Position: 1] [Total Money: $300] Player 5 toss a die... Faces are [3,3] = 6
-[Position: 7] [Total Money: $300] Player 5 goes to RailRoad1
-There is no owner of RailRoad1.
-Player 5 don't want to buy RailRoad1
-Player 5: [Position: 7] [Total Money: $300] 
-
-Turn : 7 - Player 4
-
-[Position: 19] [Total Money: $90] Player 4 toss a die... Faces are [1,3] = 4
-[Position: 23] [Total Money: $90] Player 4 goes to Square22
-There is no owner of Square22.
-Player 4 can't buy Square22
-Player 4: [Position: 23] [Total Money: $90] 
-
-Turn : 7 - Player 3
-
-[Position: 13] [Total Money: $100] Player 3 toss a die... Faces are [2,1] = 3
-[Position: 16] [Total Money: $100] Player 3 goes to Square15
-There is no owner of Square15.
-Player 3 can't buy Square15
-Player 3: [Position: 16] [Total Money: $100] 
+Turn : 6 - Player 2
+[Position: 40] [Total Money: $25] Player 2 toss a die... Faces are [4,6] = 10[Position: 10] [Total Money: $25] Player 2 goes to Square9
+There is no owner of Square9.Player 2 can't buy Square9Player 2: [Position: 10] [Total Money: $25] 
+*
 
 Turn : 7 - Player 1
+[Position: 3] [Total Money: $100] Player 1 toss a die... Faces are [6,1] = 7[Position: 10] [Total Money: $100] Player 1 goes to Square9
+There is no owner of Square9.Player 1 can't buy Square9Player 1: [Position: 10] [Total Money: $100] 
+*
 
-[Position: 19] [Total Money: $100] Player 1 toss a die... Faces are [3,1] = 4
-[Position: 23] [Total Money: $100] Player 1 goes to Square22
-There is no owner of Square22.
-Player 1 can't buy Square22
-Player 1: [Position: 23] [Total Money: $100] 
+Turn : 7 - Player 3
+[Position: 6] [Total Money: $90] Player 3 toss a die... Faces are [3,1] = 4[Position: 10] [Total Money: $90] Player 3 goes to Square9
+There is no owner of Square9.Player 3 can't buy Square9Player 3: [Position: 10] [Total Money: $90] 
+*
 
-Turn : 7 - Player 6
-
-[Position: 1] [Total Money: $300] Player 6 toss a die... Faces are [3,6] = 9
-[Position: 10] [Total Money: $300] Player 6 goes to Square9
-There is no owner of Square9.
-Player 6 don't want to buy Square9
-Player 6: [Position: 10] [Total Money: $300] 
-
-Turn : 8 - Player 5
-
-[Position: 7] [Total Money: $300] Player 5 toss a die... Faces are [1,6] = 7
-[Position: 14] [Total Money: $300] Player 5 goes to ElectricUtility
-There is no owner of ElectricUtility.
-Player 5 don't want to buy ElectricUtility
-Player 5: [Position: 14] [Total Money: $300] 
-
-Turn : 8 - Player 4
-
-[Position: 23] [Total Money: $90] Player 4 toss a die... Faces are [2,5] = 7
-[Position: 30] [Total Money: $90] Player 4 goes to WaterUtility
-There is no owner of WaterUtility.
-Player 4 can't buy WaterUtility
-Player 4: [Position: 30] [Total Money: $90] 
-
-Turn : 8 - Player 3
-
-[Position: 16] [Total Money: $100] Player 3 toss a die... Faces are [2,5] = 7
-[Position: 23] [Total Money: $100] Player 3 goes to Square22
-There is no owner of Square22.
-Player 3 can't buy Square22
-Player 3: [Position: 23] [Total Money: $100] 
+Turn : 7 - Player 2
+[Position: 10] [Total Money: $25] Player 2 toss a die... Faces are [5,5] = 10[Position: 20] [Total Money: $25] Player 2 goes to Square19
+There is no owner of Square19.Player 2 can't buy Square19Player 2: [Position: 20] [Total Money: $25] 
+*
 
 Turn : 8 - Player 1
+[Position: 10] [Total Money: $100] Player 1 toss a die... Faces are [2,6] = 8[Position: 18] [Total Money: $100] Player 1 goes to Square17
+There is no owner of Square17.Player 1 can't buy Square17Player 1: [Position: 18] [Total Money: $100] 
+*
 
-[Position: 23] [Total Money: $100] Player 1 toss a die... Faces are [3,5] = 8
-[Position: 31] [Total Money: $100] Player 1 goes to Square30
-There is no owner of Square30.
-Player 1 can't buy Square30
-Player 1: [Position: 31] [Total Money: $100] 
+Turn : 8 - Player 3
+[Position: 10] [Total Money: $90] Player 3 toss a die... Faces are [2,4] = 6[Position: 16] [Total Money: $90] Player 3 goes to Square15
+There is no owner of Square15.Player 3 can't buy Square15Player 3: [Position: 16] [Total Money: $90] 
+*
 
-Turn : 8 - Player 6
-
-[Position: 10] [Total Money: $300] Player 6 toss a die... Faces are [1,3] = 4
-[Position: 14] [Total Money: $300] Player 6 goes to ElectricUtility
-There is no owner of ElectricUtility.
-Player 6 don't want to buy ElectricUtility
-Player 6: [Position: 14] [Total Money: $300] 
-
-Turn : 9 - Player 5
-
-[Position: 14] [Total Money: $300] Player 5 toss a die... Faces are [2,4] = 6
-[Position: 20] [Total Money: $300] Player 5 goes to Square19
-There is no owner of Square19.
-[Dice Value: 6] Player 5 buy Square19 for 200
-Player 5: [Position: 20] [Total Money: $100] 
-
-Turn : 9 - Player 4
-
-[Position: 30] [Total Money: $90] Player 4 toss a die... Faces are [4,1] = 5
-[Position: 35] [Total Money: $90] Player 4 goes to Square34
-There is no owner of Square34.
-Player 4 can't buy Square34
-Player 4: [Position: 35] [Total Money: $90] 
-
-Turn : 9 - Player 3
-
-[Position: 23] [Total Money: $100] Player 3 toss a die... Faces are [3,4] = 7
-[Position: 30] [Total Money: $100] Player 3 goes to WaterUtility
-There is no owner of WaterUtility.
-Player 3 can't buy WaterUtility
-Player 3: [Position: 30] [Total Money: $100] 
+Turn : 8 - Player 2
+[Position: 20] [Total Money: $25] Player 2 toss a die... Faces are [3,2] = 5[Position: 25] [Total Money: $25] Player 2 goes to Square24
+There is no owner of Square24.Player 2 can't buy Square24Player 2: [Position: 25] [Total Money: $25] 
+*
 
 Turn : 9 - Player 1
+[Position: 18] [Total Money: $100] Player 1 toss a die... Faces are [1,1] = 2[Position: 20] [Total Money: $100] Player 1 goes to Square19
+There is no owner of Square19.Player 1 can't buy Square19Player 1: [Position: 20] [Total Money: $100] 
+*
 
-[Position: 31] [Total Money: $100] Player 1 toss a die... Faces are [2,3] = 5
-[Position: 36] [Total Money: $100] Player 1 goes to Square35
-There is no owner of Square35.
-Player 1 can't buy Square35
-Player 1: [Position: 36] [Total Money: $100] 
+Turn : 9 - Player 3
+[Position: 16] [Total Money: $90] Player 3 toss a die... Faces are [2,2] = 4[Position: 20] [Total Money: $90] Player 3 goes to Square19
+There is no owner of Square19.Player 3 can't buy Square19Player 3: [Position: 20] [Total Money: $90] 
+*
 
-Turn : 9 - Player 6
-
-[Position: 14] [Total Money: $300] Player 6 toss a die... Faces are [1,2] = 3
-[Position: 17] [Total Money: $300] Player 6 goes to RailRoad2
-There is no owner of RailRoad2.
-[Dice Value: 4] Player 6 buy RailRoad2 for 200
-Player 6: [Position: 17] [Total Money: $100] 
-
-Turn : 10 - Player 5
-
-[Position: 20] [Total Money: $100] Player 5 toss a die... Faces are [4,4] = 8
-[Position: 28] [Total Money: $100] Player 5 goes to Square27
-There is no owner of Square27.
-Player 5 can't buy Square27
-Player 5: [Position: 28] [Total Money: $100] 
-
-Turn : 10 - Player 4
-
-[Position: 35] [Total Money: $90] Player 4 toss a die... Faces are [5,6] = 11
-[Position: 6] [Total Money: $90] Player 4 goes to Income Tax
-[Position: 6] [Total Money: $90] Player 4, will pay 0 income tax.
-
-Turn : 10 - Player 3
-
-[Position: 30] [Total Money: $100] Player 3 toss a die... Faces are [1,6] = 7
-[Position: 37] [Total Money: $100] Player 3 goes to RailRoad4
-There is no owner of RailRoad4.
-Player 3 can't buy RailRoad4
-Player 3: [Position: 37] [Total Money: $100] 
+Turn : 9 - Player 2
+[Position: 25] [Total Money: $25] Player 2 toss a die... Faces are [1,5] = 6[Position: 31] [Total Money: $25] Player 2 goes to Square30
+There is no owner of Square30.Player 2 can't buy Square30Player 2: [Position: 31] [Total Money: $25] 
+*
 
 Turn : 10 - Player 1
+[Position: 20] [Total Money: $100] Player 1 toss a die... Faces are [5,5] = 10[Position: 30] [Total Money: $100] Player 1 goes to WaterUtility
+There is no owner of WaterUtility.Player 1 can't buy WaterUtilityPlayer 1: [Position: 30] [Total Money: $100] 
+*
 
-[Position: 36] [Total Money: $100] Player 1 toss a die... Faces are [1,2] = 3
-[Position: 39] [Total Money: $100] Player 1 goes to Square38
-There is no owner of Square38.
-Player 1 can't buy Square38
-Player 1: [Position: 39] [Total Money: $100] 
+Turn : 10 - Player 3
+[Position: 20] [Total Money: $90] Player 3 toss a die... Faces are [6,6] = 12[Position: 32] [Total Money: $90] Player 3 goes to Go to Jail
+[Position: 12] [Total Money: $90] Player 3 is in Jail
 
-Turn : 10 - Player 6
+*
 
-[Position: 17] [Total Money: $100] Player 6 toss a die... Faces are [5,3] = 8
-[Position: 25] [Total Money: $100] Player 6 goes to Square24
-There is no owner of Square24.
-Player 6 can't buy Square24
-Player 6: [Position: 25] [Total Money: $100] 
-
-Turn : 11 - Player 5
-
-[Position: 28] [Total Money: $100] Player 5 toss a die... Faces are [5,1] = 6
-[Position: 34] [Total Money: $100] Player 5 goes to Square33
-There is no owner of Square33.
-Player 5 can't buy Square33
-Player 5: [Position: 34] [Total Money: $100] 
-
-Turn : 11 - Player 4
-
-[Position: 6] [Total Money: $90] Player 4 toss a die... Faces are [2,4] = 6
-[Position: 12] [Total Money: $90] Player 4 goes to Jail
-[Position: 12] [Total Money: $-410] Player 4 has been Jail and lost 500 money
-
-Turn : 11 - Player 4
-
-[Position: 12] [Total Money: $-410] Player 4 has been broke out!
-
-Turn : 11 - Player 3
-
-[Position: 37] [Total Money: $100] Player 3 toss a die... Faces are [5,3] = 8
-[Position: 5] [Total Money: $100] Player 3 goes to Square4
-There is no owner of Square4.
-Player 3 can't buy Square4
-Player 3: [Position: 5] [Total Money: $100] 
+Turn : 10 - Player 2
+[Position: 31] [Total Money: $25] Player 2 toss a die... Faces are [1,1] = 2[Position: 33] [Total Money: $25] Player 2 goes to Square32
+There is no owner of Square32.Player 2 can't buy Square32Player 2: [Position: 33] [Total Money: $25] 
+*
 
 Turn : 11 - Player 1
+[Position: 30] [Total Money: $100] Player 1 toss a die... Faces are [1,2] = 3[Position: 33] [Total Money: $100] Player 1 goes to Square32
+There is no owner of Square32.Player 1 can't buy Square32Player 1: [Position: 33] [Total Money: $100] 
+*
 
-[Position: 39] [Total Money: $100] Player 1 toss a die... Faces are [4,4] = 8
-[Position: 7] [Total Money: $100] Player 1 goes to RailRoad1
-There is no owner of RailRoad1.
-Player 1 can't buy RailRoad1
-Player 1: [Position: 7] [Total Money: $100] 
+Turn : 11 - Player 3
+[Position: 12] [Total Money: $90] Player 3 toss a die... Faces are [4,3] = 7[Position: 19] [Total Money: $90] Player 3 goes to Square18
+There is no owner of Square18.Player 3 can't buy Square18Player 3: [Position: 19] [Total Money: $90] 
+*
 
-Turn : 11 - Player 6
+Turn : 11 - Player 2
+[Position: 33] [Total Money: $25] Player 2 toss a die... Faces are [6,6] = 12[Position: 5] [Total Money: $25] Player 2 goes to Square4
+There is no owner of Square4.Player 2 can't buy Square4Player 2: [Position: 5] [Total Money: $25] 
+*
 
-[Position: 25] [Total Money: $100] Player 6 toss a die... Faces are [5,3] = 8
-[Position: 33] [Total Money: $100] Player 6 goes to Square32
-There is no owner of Square32.
-Player 6 can't buy Square32
-Player 6: [Position: 33] [Total Money: $100] 
+Turn : 12 - Player 1
+[Position: 33] [Total Money: $100] Player 1 toss a die... Faces are [4,4] = 8[Position: 1] [Total Money: $100] Player 1 goes to GO
+[Position: 1] [Total Money: $300] Player 1 is at Go... Giving $200
 
-Turn : 12 - Player 5
-
-[Position: 34] [Total Money: $100] Player 5 toss a die... Faces are [1,6] = 7
-[Position: 1] [Total Money: $100] Player 5 goes to GO
-[Position: 1] [Total Money: $300] Player 5 is at Go... Giving $200
+*
 
 Turn : 12 - Player 3
+[Position: 19] [Total Money: $90] Player 3 toss a die... Faces are [3,6] = 9[Position: 28] [Total Money: $90] Player 3 goes to Square27
+There is no owner of Square27.Player 3 can't buy Square27Player 3: [Position: 28] [Total Money: $90] 
+*
 
-[Position: 5] [Total Money: $100] Player 3 toss a die... Faces are [1,1] = 2
-[Position: 7] [Total Money: $100] Player 3 goes to RailRoad1
-There is no owner of RailRoad1.
-Player 3 can't buy RailRoad1
-Player 3: [Position: 7] [Total Money: $100] 
+Turn : 12 - Player 2
+[Position: 5] [Total Money: $25] Player 2 toss a die... Faces are [4,3] = 7[Position: 12] [Total Money: $25] Player 2 goes to Jail
+[Position: 12] [Total Money: $-475] Player 2 has been Jail and lost 500 money
 
-Turn : 12 - Player 1
+Turn : 12 - Player 2
+[Position: 12] [Total Money: $-475] Player 2 has been broke out!
 
-[Position: 7] [Total Money: $100] Player 1 toss a die... Faces are [2,3] = 5
-[Position: 12] [Total Money: $100] Player 1 goes to Jail
-[Position: 12] [Total Money: $-400] Player 1 has been Jail and lost 500 money
+*
 
-Turn : 12 - Player 1
+Turn : 13 - Player 1
+[Position: 1] [Total Money: $300] Player 1 toss a die... Faces are [4,1] = 5[Position: 6] [Total Money: $300] Player 1 goes to Income Tax
+[Position: 6] [Total Money: $270] Player 1, will pay 30 income tax.
 
-[Position: 12] [Total Money: $-400] Player 1 has been broke out!
-
-Turn : 12 - Player 6
-
-[Position: 33] [Total Money: $100] Player 6 toss a die... Faces are [2,3] = 5
-[Position: 38] [Total Money: $100] Player 6 goes to Square37
-There is no owner of Square37.
-Player 6 can't buy Square37
-Player 6: [Position: 38] [Total Money: $100] 
-
-Turn : 13 - Player 5
-
-[Position: 1] [Total Money: $300] Player 5 toss a die... Faces are [2,6] = 8
-[Position: 9] [Total Money: $300] Player 5 goes to Square8
-There is no owner of Square8.
-Player 5 don't want to buy Square8
-Player 5: [Position: 9] [Total Money: $300] 
+*
 
 Turn : 13 - Player 3
+[Position: 28] [Total Money: $90] Player 3 toss a die... Faces are [3,2] = 5[Position: 33] [Total Money: $90] Player 3 goes to Square32
+There is no owner of Square32.Player 3 can't buy Square32Player 3: [Position: 33] [Total Money: $90] 
+*
 
-[Position: 7] [Total Money: $100] Player 3 toss a die... Faces are [6,3] = 9
-[Position: 16] [Total Money: $100] Player 3 goes to Square15
-There is no owner of Square15.
-Player 3 can't buy Square15
-Player 3: [Position: 16] [Total Money: $100] 
+*
 
-Turn : 13 - Player 6
-
-[Position: 38] [Total Money: $100] Player 6 toss a die... Faces are [3,1] = 4
-[Position: 2] [Total Money: $100] Player 6 goes to Square1
-There is no owner of Square1.
-Player 6 can't buy Square1
-Player 6: [Position: 2] [Total Money: $100] 
-
-Turn : 14 - Player 5
-
-[Position: 9] [Total Money: $300] Player 5 toss a die... Faces are [2,2] = 4
-[Position: 13] [Total Money: $300] Player 5 goes to Square12
-There is no owner of Square12.
-Player 5 don't want to buy Square12
-Player 5: [Position: 13] [Total Money: $300] 
+Turn : 14 - Player 1
+[Position: 6] [Total Money: $270] Player 1 toss a die... Faces are [6,1] = 7[Position: 13] [Total Money: $270] Player 1 goes to Square12
+There is no owner of Square12.[Dice Value: 6] Player 1 buy Square12 for 200Player 1: [Position: 13] [Total Money: $70] 
+*
 
 Turn : 14 - Player 3
+[Position: 33] [Total Money: $90] Player 3 toss a die... Faces are [3,6] = 9[Position: 2] [Total Money: $90] Player 3 goes to Square1
+There is no owner of Square1.Player 3 can't buy Square1Player 3: [Position: 2] [Total Money: $90] 
+*
 
-[Position: 16] [Total Money: $100] Player 3 toss a die... Faces are [5,2] = 7
-[Position: 23] [Total Money: $100] Player 3 goes to Square22
-There is no owner of Square22.
-Player 3 can't buy Square22
-Player 3: [Position: 23] [Total Money: $100] 
+*
 
-Turn : 14 - Player 6
-
-[Position: 2] [Total Money: $100] Player 6 toss a die... Faces are [6,2] = 8
-[Position: 10] [Total Money: $100] Player 6 goes to Square9
-There is no owner of Square9.
-Player 6 can't buy Square9
-Player 6: [Position: 10] [Total Money: $100] 
-
-Turn : 15 - Player 5
-
-[Position: 13] [Total Money: $300] Player 5 toss a die... Faces are [4,5] = 9
-[Position: 22] [Total Money: $300] Player 5 goes to Free Parking
-[Position: 22] [Total Money: $300] Player 5 has to wait at Free Parking Square
+Turn : 15 - Player 1
+[Position: 13] [Total Money: $70] Player 1 toss a die... Faces are [4,3] = 7[Position: 20] [Total Money: $70] Player 1 goes to Square19
+There is no owner of Square19.Player 1 can't buy Square19Player 1: [Position: 20] [Total Money: $70] 
+*
 
 Turn : 15 - Player 3
+[Position: 2] [Total Money: $90] Player 3 toss a die... Faces are [5,4] = 9[Position: 11] [Total Money: $90] Player 3 goes to Square10
+There is no owner of Square10.Player 3 can't buy Square10Player 3: [Position: 11] [Total Money: $90] 
+*
 
-[Position: 23] [Total Money: $100] Player 3 toss a die... Faces are [2,5] = 7
-[Position: 30] [Total Money: $100] Player 3 goes to WaterUtility
-There is no owner of WaterUtility.
-Player 3 can't buy WaterUtility
-Player 3: [Position: 30] [Total Money: $100] 
+*
 
-Turn : 15 - Player 6
-
-[Position: 10] [Total Money: $100] Player 6 toss a die... Faces are [5,5] = 10
-[Position: 20] [Total Money: $100] Player 6 goes to Square19
-Player 6 paid $140 rent to owner Player 5.
-Player 6: [Position: 20] [Total Money: $-40] 
-
-Turn : 15 - Player 6
-
-[Position: 20] [Total Money: $-40] Player 6 has been broke out!
-
-Turn : 16 - Player 5
-
-[Position: 22] [Total Money: $440] Player 5 toss a die... Faces are [6,4] = 10
-[Position: 32] [Total Money: $440] Player 5 goes to Go to Jail
-[Position: 12] [Total Money: $440] Player 5 is in Jail
+Turn : 16 - Player 1
+[Position: 20] [Total Money: $70] Player 1 toss a die... Faces are [6,3] = 9[Position: 29] [Total Money: $70] Player 1 goes to Square28
+There is no owner of Square28.Player 1 can't buy Square28Player 1: [Position: 29] [Total Money: $70] 
+*
 
 Turn : 16 - Player 3
+[Position: 11] [Total Money: $90] Player 3 toss a die... Faces are [4,4] = 8[Position: 19] [Total Money: $90] Player 3 goes to Square18
+There is no owner of Square18.Player 3 can't buy Square18Player 3: [Position: 19] [Total Money: $90] 
+*
 
-[Position: 30] [Total Money: $100] Player 3 toss a die... Faces are [5,6] = 11
-[Position: 1] [Total Money: $100] Player 3 goes to GO
-[Position: 1] [Total Money: $300] Player 3 is at Go... Giving $200
+*
 
-Turn : 17 - Player 5
-
-[Position: 12] [Total Money: $440] Player 5 toss a die... Faces are [5,6] = 11
-[Position: 23] [Total Money: $440] Player 5 goes to Square22
-There is no owner of Square22.
-Player 5 don't want to buy Square22
-Player 5: [Position: 23] [Total Money: $440] 
+Turn : 17 - Player 1
+[Position: 29] [Total Money: $70] Player 1 toss a die... Faces are [4,2] = 6[Position: 35] [Total Money: $70] Player 1 goes to Square34
+There is no owner of Square34.Player 1 can't buy Square34Player 1: [Position: 35] [Total Money: $70] 
+*
 
 Turn : 17 - Player 3
+[Position: 19] [Total Money: $90] Player 3 toss a die... Faces are [2,5] = 7[Position: 26] [Total Money: $90] Player 3 goes to Square25
+There is no owner of Square25.Player 3 can't buy Square25Player 3: [Position: 26] [Total Money: $90] 
+*
 
-[Position: 1] [Total Money: $300] Player 3 toss a die... Faces are [1,1] = 2
-[Position: 3] [Total Money: $300] Player 3 goes to Square2
-There is no owner of Square2.
-Player 3 don't want to buy Square2
-Player 3: [Position: 3] [Total Money: $300] 
+*
 
-Turn : 18 - Player 5
+Turn : 18 - Player 1
+[Position: 35] [Total Money: $70] Player 1 toss a die... Faces are [1,4] = 5[Position: 40] [Total Money: $70] Player 1 goes to Luxury Tax
+[Position: 40] [Total Money: $-5] Player 1, will pay 75 luxury tax.
 
-[Position: 23] [Total Money: $440] Player 5 toss a die... Faces are [4,1] = 5
-[Position: 28] [Total Money: $440] Player 5 goes to Square27
-There is no owner of Square27.
-Player 5 don't want to buy Square27
-Player 5: [Position: 28] [Total Money: $440] 
+Turn : 18 - Player 1
+[Position: 40] [Total Money: $-5] Player 1 has been broke out!
 
-Turn : 18 - Player 3
-
-[Position: 3] [Total Money: $300] Player 3 toss a die... Faces are [6,3] = 9
-[Position: 12] [Total Money: $300] Player 3 goes to Jail
-[Position: 12] [Total Money: $-200] Player 3 has been Jail and lost 500 money
-
-Turn : 18 - Player 3
-
-[Position: 12] [Total Money: $-200] Player 3 has been broke out!
-----------
-Player 5 is won by don't brokeout!
+*
+Player 3 is won by don't brokeout!
 Game over!

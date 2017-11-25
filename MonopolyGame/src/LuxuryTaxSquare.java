@@ -1,3 +1,4 @@
+import java.io.PrintWriter;
 
 public class LuxuryTaxSquare extends Square {
 
@@ -11,10 +12,11 @@ public class LuxuryTaxSquare extends Square {
 	}
 
 	@Override
-	public void doAction(Player player, GameBoard board) {
+	public void doAction(Player player, GameBoard board,PrintWriter printer) {
 		int taxAmount= 75;
 		player.getMoney().substractMoney(taxAmount);
 		System.out.println("[Position: " + (player.getCurrentPosition()+1) + "] [Total Money: $" + player.getMoney().getMoney() + "] " + player.getName() + ", will pay " + taxAmount +" luxury tax.");
+		printer.write("[Position: " + (player.getCurrentPosition()+1) + "] [Total Money: $" + player.getMoney().getMoney() + "] " + player.getName() + ", will pay " + taxAmount +" luxury tax.\n");
 	}
 
 }

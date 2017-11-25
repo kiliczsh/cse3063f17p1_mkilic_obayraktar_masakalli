@@ -1,3 +1,5 @@
+import java.io.PrintWriter;
+
 public class Player {
 	int totalWalk = 0;
 	int position = 0;
@@ -17,7 +19,7 @@ public class Player {
 		return totalWalk;
 	}
 	
-	public int tossDie(Dice die1,Dice die2) {
+	public int tossDie(Dice die1,Dice die2,PrintWriter printer) {
 		int face1 = die1.getFace();
 		int face2 = die2.getFace();
 		if(face1%2==0 && face2%2==0 && face1==face2) {
@@ -26,8 +28,9 @@ public class Player {
 			doubleCounter=0;
 		}
 		System.out.println("\nTurn : "+(getTotalWalk() + 1)+ " - "+name+"\n");
+		printer.write("\nTurn : "+(getTotalWalk() + 1)+ " - "+name+"\n");
 		System.out.println("[Position: " + (getCurrentPosition()+1) + "] [Total Money: $" + getMoney().getMoney() + "] " + getName() + " toss a die... Faces are [" + face1+","+face2+"] = "+(face1+face2));
-	
+		printer.write("[Position: " + (getCurrentPosition()+1) + "] [Total Money: $" + getMoney().getMoney() + "] " + getName() + " toss a die... Faces are [" + face1+","+face2+"] = "+(face1+face2));
 		
 		
 		return (face1+face2);
