@@ -6,7 +6,6 @@ public class JailSquare extends Square {
 	}
 	
 	public JailSquare(String string, int i) {
-		// TODO Auto-generated constructor stub
 		super(string,i);
 	}
 

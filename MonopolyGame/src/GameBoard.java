@@ -10,6 +10,7 @@ public class GameBoard {
 	Player[] players;
 	Square[] squares = new Square[40];
 	
+	@SuppressWarnings("unlikely-arg-type")
 	public GameBoard(int totalPlayer,int initialCash, String[][] squareInfo,PrintWriter printer) {
 		activePlayers=totalPlayer;
 		players = new Player[totalPlayer];

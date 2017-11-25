@@ -22,7 +22,7 @@ public class Monopoly {
 		//File I/O part
 		
 		  List<String> lines = new ArrayList<String>(); 
-		  File inputFile = new File("input.txt");
+		  File inputFile = new File("Monopoly-Lots.csv");
 		  File outputFile = new File("monopoly-output.txt");
 		  PrintWriter printer = new PrintWriter(outputFile);
 		  printer.write("Hello");
@@ -114,7 +114,6 @@ public class Monopoly {
 				
 			}
 			gameBoard.nextTurn();
-			printer.write("\n*\n");
 		}
 		System.out.println("----------");
 		if(gameBoard.hasWinner()){

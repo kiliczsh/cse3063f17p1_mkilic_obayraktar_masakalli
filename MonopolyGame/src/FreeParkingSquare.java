@@ -6,7 +6,6 @@ public class FreeParkingSquare extends Square {
 	}
 	
 	public FreeParkingSquare(String string, int i) {
-		// TODO Auto-generated constructor stub
 		super(string,i);
 	}
 

@@ -7,7 +7,6 @@ public class LuxuryTaxSquare extends Square {
 	}
 
 	public LuxuryTaxSquare(String string, int i) {
-		// TODO Auto-generated constructor stub
 		super(string,i);
 	}
 

@@ -30,7 +30,7 @@ public class Player {
 		System.out.println("\nTurn : "+(getTotalWalk() + 1)+ " - "+name+"\n");
 		printer.write("\nTurn : "+(getTotalWalk() + 1)+ " - "+name+"\n");
 		System.out.println("[Position: " + (getCurrentPosition()+1) + "] [Total Money: $" + getMoney().getMoney() + "] " + getName() + " toss a die... Faces are [" + face1+","+face2+"] = "+(face1+face2));
-		printer.write("[Position: " + (getCurrentPosition()+1) + "] [Total Money: $" + getMoney().getMoney() + "] " + getName() + " toss a die... Faces are [" + face1+","+face2+"] = "+(face1+face2));
+		printer.write("[Position: " + (getCurrentPosition()+1) + "] [Total Money: $" + getMoney().getMoney() + "] " + getName() + " toss a die... Faces are [" + face1+","+face2+"] = "+(face1+face2)+"\n");
 		
 		
 		return (face1+face2);

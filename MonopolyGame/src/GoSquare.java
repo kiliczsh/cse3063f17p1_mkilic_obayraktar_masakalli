@@ -4,14 +4,10 @@ public class GoSquare extends Square {
 	public GoSquare(String name) {
 		super(name);
 	}
-	
-
 
 	public GoSquare(String string, int i) {
 		super(string,i);
 	}
-
-
 
 	@Override
 	public void doAction(Player player, GameBoard board,PrintWriter printer) {
