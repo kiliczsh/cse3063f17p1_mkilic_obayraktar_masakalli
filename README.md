@@ -13,7 +13,7 @@ __*[Onur Bayraktar](https://github.com/onurbayraktar)-150114079*__ :rocket:
 
 ### Iteration 3 To Do List
 ##### Due Date : Sun, November 26, 14:00
-- [ ] All trace of activity should be printed to the screen and to a text file named monopoly-output.txt simultaneously. One of these monopoly-output.txt files from your runs must be loaded to GitHub. 
+- [x] All trace of activity should be printed to the screen and to a text file named monopoly-output.txt simultaneously. One of these monopoly-output.txt files from your runs must be loaded to GitHub. 
 - [x] Lots
 - [x] Railroads
 - [x] Utility Squares
