@@ -34,7 +34,13 @@ for a in value:
     if (kelimeSayisi <50):
         print((kelimeSayisi+1),a, sep=" : ")
         kelimeSayisi = kelimeSayisi+1
-        
+
+#print(*value[0:40],"\n")
+print(type(frequency))
+
+
+for k in frequency:
+    print(k)
 # Generate a word cloud image
 
 # color function
