@@ -19,18 +19,29 @@ def getPageCount(pdf_file):
 	pages = pdfReader.numPages
 	return pages
 
-def extractData(pdf_file, page):
-
-	pdfFileObj = open(pdf_file, 'rb')
-	pdfReader = PyPDF2.PdfFileReader(pdfFileObj)
-	pageObj = pdfReader.getPage(page)
-	data = pageObj.extractText()
+def extractData(pdf_file, numPages):
+	for page in range(numPages):
+		pdfFileObj = open(pdf_file, 'rb')
+		pdfReader = PyPDF2.PdfFileReader(pdfFileObj)
+		pageObj = pdfReader.getPage(page)
+		data = pageObj.extractText()
+		data.join(data)	
 	return data
 
 def getWordCount(data):
 
 	data=data.split()
 	return len(data)
+
+def getUniqueItems(iterable):
+	result = []
+	for item in iterable:
+	    if item not in result:
+	        result.append(item)
+	return result
+
+
+
 
 # color function
 def random_color_func(word=None, font_size=None, position=None, orientation=None, font_path=None, random_state=None):
@@ -59,52 +70,45 @@ def main():
 		totalWords = 0
 		numPages = getPageCount(pdfFile)
 		print("num of pages ",numPages)
-		for i in range(numPages):
-			wordstring = extractData(pdfFile, i)
+		
+		
+		wordstring = extractData(pdfFile, numPages)
+	
 			
-			# Generate text to count
-			frequency = {}
-			#document_text = open('test.txt', 'r')
-			#wordstring = document_text.read().lower()
-			wordlist = re.findall(r'\b[a-z]{3,15}\b', wordstring)
-			#wordlist= re.sub(r'\W+', ' ', wordlist)
+		# Generate text to count
+		frequency = {}
 
-			wordfreq = [wordlist.count(w) for w in wordlist]
+		wordstring = wordstring.lower()
+		wordlist = re.findall(r'\b[a-z]{3,15}\b', wordstring)
+		#wordlist= re.sub(r'\W+', ' ', wordlist)
+		wordfreq = [wordlist.count(w) for w in wordlist]
+		"""
+		wordlist.sort()
+		wordlist.reverse()
+		wordfreq.sort()
+		wordfreq.reverse()
+		"""
+		print("Unique\n")
+		print ('\n'.join(getUniqueItems(list(wordlist))))
+		kelimeSayisi=0
 
-			"""
-			print("String\n" + wordstring +"\n")
-			print("List\n" + str(wordlist) + "\n")
-			print("Frequencies\n" + str(wordfreq) + "\n")
-			print("Pairs\n" + str(zip(wordlist, wordfreq)))
-			"""
-			wordlist.sort()
-			wordlist.reverse()
-			wordfreq.sort()
-			wordfreq.reverse()
-
-			kelimeSayisi=0
-
-			for a in wordlist:
-				kelimeSayisi = kelimeSayisi+1
-				if (kelimeSayisi <50):
-						print((kelimeSayisi+1),a, sep=" : ")
-
-
-
-			#print("String\n" + wordstring +"\n")
-			print("List\n" + str(wordlist) + "\n")
-			print("Frequencies\n" + str(wordfreq) + "\n")
-			print("Pairs\n" + str(zip(wordlist, wordfreq)))
-			print(type(wordstring))
-			print(type(str(wordlist)))
-			print(type(wordfreq))
-			print(type(str(wordfreq)))
-			print(type(str(zip(wordlist, wordfreq))))
-			print(type(zip(wordlist, wordfreq)))
-			time.sleep(1)
-			
-
-
+		for a in wordlist:
+			kelimeSayisi = kelimeSayisi+1
+			if (kelimeSayisi <=5):
+				print((kelimeSayisi),a, sep=" : ")
+				
+		#print("String\n" + wordstring +"\n")
+		print("Wordlist\n" ,wordlist , "\n")
+		print("List\n" + str(wordlist) + "\n")
+		print("Frequencies\n" + str(wordfreq) + "\n")
+		print("Pairs\n" + str(zip(wordlist, wordfreq)))
+		print(type(wordstring))
+		print(type(str(wordlist)))
+		print(type(wordfreq))
+		print(type(str(wordfreq)))
+		print(type(str(zip(wordlist, wordfreq))))
+		print(type(zip(wordlist, wordfreq)))
+		
 
 
 # Display the generated image:
@@ -114,11 +118,12 @@ def main():
 #plt.axis("off")
 
 # lower max_font_size
-			wordcloud = WordCloud(background_color = 'white',width = 1200,height = 1000,color_func = random_color_func).generate(wordstring)
-			plt.figure()
-			plt.imshow(wordcloud, interpolation="bilinear")
-			plt.axis("off")
-			plt.show()
+		wordcloud = WordCloud(background_color = 'white',width = 1200,height = 1000,
+					color_func = random_color_func).generate(wordstring)
+		plt.figure()
+		plt.imshow(wordcloud, interpolation="bilinear")
+		plt.axis("off")
+		plt.show()
 
 # The pil way (if you don't have matplotlib)
 # image = wordcloud.to_image()
