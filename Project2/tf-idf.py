@@ -1,14 +1,20 @@
 import os
+import re
 import sys
 import glob
+import nltk
 import PyPDF2
 import docx2txt
 import more_itertools as mit
-from wordcloud import WordCloud
 import matplotlib.pyplot as plt
+from math import log10
 from collections import Counter
 from operator import itemgetter
-from math import log10
+from wordcloud import WordCloud
+from nltk.corpus import stopwords
+
+
+
 
 
 # FUNCTION
@@ -200,8 +206,8 @@ def printLen(tfList,idfList,bound):
 
 ###################################################   MAIN    ##############################################################
 
-topBound=5
-
+topBound=50
+stop_words = set(stopwords.words('english'))
 path="input/*.*"
 fileList= getFileList(path)
 rawText=[]
@@ -211,27 +217,33 @@ print("\n")
 for fileName in fileList:
     if ".txt" in fileName:
         print("Filename: ", fileName)
-        text=getText(fileName)
+        text = getText(fileName)
+        text = re.sub(r'[^\w\s]','',text)
     elif ".docx" in fileName:
         print("Filename: ", fileName)
-        text=getWord(fileName)
+        text = getWord(fileName)
+        text = re.sub(r'[^\w\s]','',text)
     elif ".pdf" in fileName:
         print("Filename: ", fileName)
-        text=getPDF(fileName)
+        text = getPDF(fileName)
+        text = re.sub(r'[^\w\s]','',text)
     else:
         print("\n",fileName," is not my file type...") 
     rawText.insert(index,text)
-    
 
+filtered_sentence = []    
+for w in rawText:
+    if w not in stop_words:
+        filtered_sentence.append(w)
 
 print("\nTF LIST \n")
-printTopElements(termFrequency(rawText)[0],topBound)
+printTopElements(termFrequency(filtered_sentence)[0],topBound)
 print("\nTF-IDF LIST \n")
-printTopElements(inverseDocumentFrequency(rawText)[0],topBound)
-printFile("output/tf_list.csv",termFrequency(rawText)[0])
-printFile("output/tfidf_list.csv",inverseDocumentFrequency(rawText)[0])
-topTF50 = termFrequency(rawText)[0][:50]
-topIDF50 = inverseDocumentFrequency(rawText)[0][:50]
+printTopElements(inverseDocumentFrequency(filtered_sentence)[0],topBound)
+printFile("output/tf_list.csv",termFrequency(filtered_sentence)[0])
+printFile("output/tfidf_list.csv",inverseDocumentFrequency(filtered_sentence)[0])
+topTF50 = termFrequency(filtered_sentence)[0][:50]
+topIDF50 = inverseDocumentFrequency(filtered_sentence)[0][:50]
 createCloud(createCloudText(topTF50),"output/tf_wordCloud.pdf")
 createCloud(createCloudText(topIDF50),"output/tfidf_wordCloud.pdf")
 
